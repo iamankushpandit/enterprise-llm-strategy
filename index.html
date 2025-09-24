@@ -48,7 +48,7 @@
         .reading-time {
             margin-top: 20px;
             padding: 15px;
-            background: rgba(255,255,255,0.1);
+            background: #c094941a;
             border-radius: 8px;
         }
         
@@ -56,7 +56,7 @@
             margin: 0;
             font-size: 1.1em;
             color: #ffffff;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 2px #f1eaea4d;
             font-weight: 500;
         }
         
@@ -700,6 +700,16 @@
                 grid-template-columns: 1fr;
             }
         }
+        
+        /* Chart source caption */
+        .chart-source {
+            margin-top: 12px;
+            font-size: 0.95em;
+            color: #555;
+            background: rgba(248,249,250,0.6);
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
     </style>
 </head>
 <body>
@@ -779,6 +789,7 @@
                     <div class="chart-container">
                         <canvas id="realityChart"></canvas>
                     </div>
+                    <div class="chart-source">Source: Synthesis of industry research on data preparation and integration effort (see <a href="#ref-15" class="citation">[15]</a>, <a href="#ref-14" class="citation">[14]</a>, <a href="#ref-27" class="citation">[27]</a>). Values plotted are research-informed estimates; exact percentages are author-synthesized to illustrate the "implementation iceberg" concept. If you have primary dataset links to replace the estimates, please provide them.</div>
                     <p><strong>What This Shows:</strong> This chart reveals the massive gap between projected and actual effort distribution in AI projects. While organizations typically expect data preparation to consume 20% of their effort, research shows it actually requires 40% of total project resources. Integration complexity similarly doubles from projected 15% to actual 30%. The chart demonstrates why 85% of AI projects exceed their initial timelines and budgets - the "visible" work represents only a fraction of the true implementation iceberg.</p>
                     <p><strong>Key Insight:</strong> If your AI implementation plan allocates equal effort across phases, you're setting up for failure. Data preparation and integration will consume 70% of your actual effort, not the 35% typically projected.</p>
                 </div>
@@ -847,6 +858,7 @@
                     <div class="chart-container">
                         <canvas id="trueCostChart"></canvas>
                     </div>
+                    <div class="chart-source">Source: Cost components compiled from vendor pricing tiers and industry reports (<a href="#ref-8" class="citation">[8]</a>, <a href="#ref-112" class="citation">[112]</a>, <a href="#ref-89" class="citation">[89]</a>). The table values and plotted series combine quoted base costs and research-adjusted "true cost" multipliers. Note: the multiplier reference <a href="#ref-33" class="citation">[33]</a> is referenced in the text but missing from the References section — the 3x contingency multiplier here is an author synthesis aligned with <a href="#ref-8" class="citation">[8]</a> and <a href="#ref-112" class="citation">[112]</a>.</div>
                     <p><strong>What This Shows:</strong> This chart exposes the dramatic difference between advertised pricing and actual implementation costs. While SaaS providers quote linear pricing growth, true costs include integration, compliance, training, and failure contingencies that create exponential cost curves. The "break-even" point between SaaS and self-hosting shifts from the commonly cited 250 users to a realistic 500-750 users when hidden costs are included.</p>
                     <p><strong>Key Insight:</strong> Budget planning based on vendor quotes will fail spectacularly. The 3-5x cost multiplier isn't pessimism - it's mathematical reality when you include data preparation, compliance requirements, integration complexity, and organizational change management. Notice how both options become expensive quickly, challenging the "AI will save money" narrative.</p>
                 </div>
@@ -917,6 +929,7 @@
                     <div class="chart-container">
                         <canvas id="realisticROIChart"></canvas>
                     </div>
+                    <div class="chart-source">Source: ROI timelines based on industry studies and case analyses (<a href="#ref-7" class="citation">[7]</a>, <a href="#ref-90" class="citation">[90]</a>, <a href="#ref-82" class="citation">[82]</a>). Plotted "Projected ROI" is illustrative of vendor marketing; "Realistic ROI" is a research-informed projection (author-synthesized values derived from the cited studies).</div>
                     <p><strong>What This Shows:</strong> This chart contrasts the optimistic ROI projections used in business cases against research-documented reality. Vendors and consultants typically show positive ROI within 6 months and exponential growth thereafter. The research-based timeline reveals negative ROI for the first 12-18 months as organizations struggle with implementation challenges, data preparation costs, and organizational resistance. Positive ROI doesn't emerge until month 18-24, and growth remains modest.</p>
                     <p><strong>Key Insight:</strong> If your business case assumes ROI within the first year, you're planning for failure. Real AI implementations require 18-24 months of investment before seeing returns, and the returns are gradual, not exponential. This timeline assumes the project succeeds - 85% fail entirely. Plan for 2-3 years of investment before meaningful returns, or don't proceed at all.</p>
                 </div>
@@ -931,6 +944,7 @@
                     <div class="chart-container">
                         <canvas id="riskMatrixChart"></canvas>
                     </div>
+                    <div class="chart-source">Source: Risk probabilities and impacts are assembled from multiple reports on regulatory, security, and market risks (<a href="#ref-10" class="citation">[10]</a>, <a href="#ref-18" class="citation">[18]</a>, <a href="#ref-25" class="citation">[25]</a>). Points on the scatter plot are qualitative, research-informed scores (author-assigned numeric probabilities/impacts to reflect narrative evidence).</div>
                     <p><strong>What This Shows:</strong> This scatter plot maps AI implementation risks by their probability of occurrence (x-axis) and business impact severity (y-axis). Bubble size represents the difficulty of mitigation. The clustering in the upper-right quadrant reveals a concentration of high-probability, high-impact risks that traditional risk assessments often underweight. Regulatory compliance failure (80% probability, 90% impact) and vendor price increases (90% probability, 70% impact) represent near-certain threats with severe consequences.</p>
                     <p><strong>Key Insight:</strong> AI implementation isn't just high-risk - it's concentrated in the worst possible risk category. Five major risks have both >60% probability and >65% business impact. Traditional risk mitigation strategies fail when multiple high-impact risks are near-certain to occur simultaneously. This risk concentration explains why even well-funded AI projects with experienced teams often fail catastrophically rather than experiencing manageable setbacks.</p>
                 </div>
@@ -1055,6 +1069,7 @@
                     <div class="chart-container">
                         <canvas id="riskAdjustedChart"></canvas>
                     </div>
+                    <div class="chart-source">Source: Privacy vs cost mapping synthesized from compliance and TCO reports (<a href="#ref-6" class="citation">[6]</a>, <a href="#ref-13" class="citation">[13]</a>, <a href="#ref-8" class="citation">[8]</a>). Bubble positions are illustrative examples showing the steep privacy-cost curve; specific coordinates are author-synthesized to demonstrate the conceptual trade-off.</div>
                     <p><strong>What This Shows:</strong> This bubble chart maps the trade-off between privacy protection (x-axis) and total annual costs (y-axis), with bubble size representing implementation complexity. It reveals that achieving high privacy levels (>95%) requires exponential cost increases rather than linear ones. SaaS options top out at ~80% privacy regardless of cost, while self-hosted solutions can achieve 99% privacy but at massive expense ($285K+ annually). The gap between 80% and 95% privacy represents the "privacy premium" that many organizations underestimate.</p>
                     <p><strong>Key Insight:</strong> There's no "good enough" middle ground in the privacy-cost trade-off. Moving from 60% to 80% privacy roughly doubles costs, but achieving 95%+ privacy quadruples them. Organizations in regulated industries face a binary choice: accept 80% privacy with SaaS solutions and their associated compliance risks, or commit to substantial self-hosting investments. The "hybrid" approaches that sound reasonable in planning sessions don't actually exist at reasonable cost points.</p>
                 </div>
@@ -1802,6 +1817,7 @@
                     <div class="chart-container">
                         <canvas id="implementationChart"></canvas>
                     </div>
+                    <div class="chart-source">Source: Implementation phase durations drawn from research on AI project timelines and surveys (<a href="#ref-7" class="citation">[7]</a>, <a href="#ref-82" class="citation">[82]</a>, <a href="#ref-35" class="citation">[35]</a>). The "Projected" vs "Research-Based" month values are research-informed but use author-synthesized month assignments to represent typical ranges reported in the literature.</div>
                     <p><strong>What This Shows:</strong> This chart compares vendor-promised implementation timelines against research-documented reality across six key phases. The total timeline expands from an optimistic 11 months to a realistic 30 months - nearly 3x longer than typically projected. Data preparation and integration phases show the most dramatic expansion: data prep grows from 2 to 6 months (3x), while integration balloons from 3 to 8 months (2.7x). Even "simple" phases like discovery and deployment take 2-3x longer than expected.</p>
                     <p><strong>Key Insight:</strong> Timeline compression is where AI projects die. The phases that seem "technical" and controllable (data prep, integration) consistently take 3x longer than projected because they involve organizational complexity, not just technical complexity. When leadership expects results in 12 months but reality requires 30 months, projects get canceled at month 15 as "failures" despite being on track for realistic timelines. Success requires setting expectations based on the red bars, not the blue ones, and having executive patience for a multi-year journey.</p>
                 </div>
@@ -1817,6 +1833,59 @@
                             <li><strong>Skills gap revelation:</strong> 76% of organizations lack internal AI expertise <a href="#ref-80" class="citation">[80]</a></li>
                             <li><strong>Compliance complexity:</strong> Legal teams identify average of 12-18 regulatory requirements <a href="#ref-81" class="citation">[81]</a></li>
                             <li><strong>Budget shock:</strong> Initial estimates prove 3-5x too low in 82% of cases <a href="#ref-82" class="citation">[82]</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Inserted Phases 2-5 -->
+                <div class="roadmap-phase">
+                    <h3>Phase 2: Data Preparation & Integration (Month 3-9)</h3>
+                    <div class="warning-box">
+                        <h4>Research-Documented Challenges</h4>
+                        <ul>
+                            <li><strong>Hidden data debt:</strong> Organizations routinely underestimate cleansing, mapping, and labeling effort — data prep often expands 2-4x versus initial estimates <a href="#ref-27" class="citation">[27]</a></li>
+                            <li><strong>Tooling fragmentation:</strong> Multiple data pipelines and legacy systems increase integration time and cost <a href="#ref-31" class="citation">[31]</a></li>
+                            <li><strong>Ownership ambiguity:</strong> Lack of clear data stewardship slows progress as teams negotiate access and retention policies <a href="#ref-35" class="citation">[35]</a></li>
+                            <li><strong>Security gating:</strong> Sensitive data requires anonymization or secure enclaves that add months to schedules <a href="#ref-6" class="citation">[6]</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="roadmap-phase">
+                    <h3>Phase 3: Model Development & Validation (Month 9-15)</h3>
+                    <div class="warning-box">
+                        <h4>Research-Documented Challenges</h4>
+                        <ul>
+                            <li><strong>Evaluation gap:</strong> Benchmarks used in R&D do not reflect production data distributions, driving rework cycles <a href="#ref-7" class="citation">[7]</a></li>
+                            <li><strong>Fine-tuning costs:</strong> Tuning on domain data uncovers additional compute and labeling costs that push budgets beyond projections <a href="#ref-28" class="citation">[28]</a></li>
+                            <li><strong>Human-in-the-loop overhead:</strong> Annotation quality control and review cycles add sustained FTE costs during validation <a href="#ref-29" class="citation">[29]</a></li>
+                            <li><strong>Regulatory testing:</strong> Fairness, bias, and safety tests frequently require iterative mitigation, lengthening validation timelines <a href="#ref-81" class="citation">[81]</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="roadmap-phase">
+                    <h3>Phase 4: Deployment & Scaling (Month 15-24)</h3>
+                    <div class="warning-box">
+                        <h4>Research-Documented Challenges</h4>
+                        <ul>
+                            <li><strong>Operational fragility:</strong> Models that work in pilot environments often fail at scale due to observability and latency issues <a href="#ref-31" class="citation">[31]</a></li>
+                            <li><strong>Cost runaway:</strong> Inference costs and network egress can exceed estimates as user demand grows <a href="#ref-112" class="citation">[112]</a></li>
+                            <li><strong>Governance bottlenecks:</strong> Change control and release approvals introduce deployment slippage in regulated firms <a href="#ref-102" class="citation">[102]</a></li>
+                            <li><strong>Third-party risk:</strong> Dependencies on vendors and APIs create supply-chain fragility that impacts uptime and continuity <a href="#ref-25" class="citation">[25]</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="roadmap-phase">
+                    <h3>Phase 5: Measurement, Optimization & Governance (Month 24+)</h3>
+                    <div class="warning-box">
+                        <h4>Research-Documented Challenges</h4>
+                        <ul>
+                            <li><strong>Slow feedback loops:</strong> Business metrics take months to reflect model impact, delaying decisive optimization actions <a href="#ref-107" class="citation">[107]</a></li>
+                            <li><strong>Technical debt accumulation:</strong> Quick fixes during deployment accumulate operational debt that erodes reliability and increases maintenance costs <a href="#ref-32" class="citation">[32]</a></li>
+                            <li><strong>Continuous compliance:</strong> Ongoing audit, data retention, and model documentation create a sustained governance burden <a href="#ref-4" class="citation">[4]</a></li>
+                            <li><strong>Scale economics:</strong> Realizing positive ROI often requires much larger scale or multi-year horizons than originally promised <a href="#ref-107" class="citation">[107]</a></li>
                         </ul>
                     </div>
                 </div>
