@@ -903,263 +903,6 @@
                 </div>
             </section>
 
-            <!-- Touch-base cadence & team responsibilities -->
-            <section id="touch-bases" class="section">
-                <h3>🔁 Touch-base Cadence & Team Responsibilities (Operations + Implementation)</h3>
-
-                <p>Successful AI deployments require tight operational discipline. Below is a practical, phase-aware cadence (daily / weekly / monthly) and a recommended team roster with clear responsibilities and exactly what to ask each role during each meeting.</p>
-
-                <div class="touch-cadence">
-                    <h4>Cadence (What to run and who should attend)</h4>
-
-                    <h5>Daily (15–30 minutes) — Standup / Incident Triage</h5>
-                    <ul>
-                        <li>Attendees: Implementation lead, DevOps/Platform engineer, SRE, ML engineer on-call, Product owner (optional)</li>
-                        <li>Purpose: Rapid status, active incidents, usage spikes, failed jobs, model-serving latency/errors, budget burn alerts.</li>
-                        <li>What to ask whom:
-                            <ul>
-                                <li>To DevOps/SRE: "Any alerts or spikes since yesterday? Any failed deployments or scaling issues?"</li>
-                                <li>To ML Engineer: "Any model degradation or training job failures? Any data pipeline backfills pending?"</li>
-                                <li>To Implementation Lead: "Any blocker that needs escalation to Product or Security?"</li>
-                                <li>To Product Owner: "Customer-impacting issues today? Prioritize fixes?"</li>
-                            </ul>
-                        </li>
-                        <li>Action window: Triage tickets, mute non-critical alerts, escalate high-severity incidents immediately.</li>
-                    </ul>
-
-                    <h5>Weekly (30–60 minutes) — Operational Review</h5>
-                    <ul>
-                        <li>Attendees: Implementation lead, Product owner, ML engineers, DevOps lead, SRE lead, Security/Compliance rep, Finance (cost owner) — rotating depending on topic.</li>
-                        <li>Purpose: Short-term health, feature deployment readiness, backlog grooming, cost/budget snapshot, anomaly review.</li>
-                        <li>What to ask whom:
-                            <ul>
-                                <li>To Finance/Cost Owner: "This week's cost delta vs budget; any unexpected spend? Any new chargeback items?"</li>
-                                <li>To DevOps/Platform: "Any resource quota risks, service limits reached, or planned infra changes?"</li>
-                                <li>To ML Team: "Any model performance regressions, retrain schedules, or data drift flags?"</li>
-                                <li>To Security/Compliance: "Any open findings, privacy incidents, or audit prep items?"</li>
-                                <li>To Product: "Are current priorities aligned with business value targets? Any customer escalations?"</li>
-                            </ul>
-                        </li>
-                        <li>Action window: Adjust weekly sprint priorities, open budget/usage tickets, schedule deeper post-mortems if anomalies found.</li>
-                    </ul>
-
-                    <h5>Monthly (60–90 minutes) — Operational Steering & Budget Review</h5>
-                    <ul>
-                        <li>Attendees: Head of Product (or Sponsor), Implementation lead, Head of Engineering, Finance/Cost Owner, Security/Compliance lead, Data Engineering lead, Business stakeholder(s).</li>
-                        <li>Purpose: Strategic review: cost vs budget, SLA/uptime trends, feature value progress, ROI tracking, risk & compliance posture.</li>
-                        <li>What to ask whom:
-                            <ul>
-                                <li>To Finance: "Cumulative spend vs monthly/quarterly budget; forecast for next period; biggest cost drivers."</li>
-                                <li>To Implementation Lead: "Delivery progress vs roadmap, major blockers, and resource needs for the next quarter."</li>
-                                <li>To Security/Compliance: "Open risks, audit readiness, and any regulatory changes that impact our operating model."</li>
-                                <li>To Data Engineering: "Data pipeline health, backfill status, and estimated effort to address data debt."</li>
-                                <li>To Product/Business: "Are we seeing expected value signals? Any go/no-go decisions required?"</li>
-                            </ul>
-                        </li>
-                        <li>Action window: Rebase budget, approve/deny scale-up requests, trigger contractual or vendor renegotiation, and publish a short executive summary for stakeholders.</li>
-                    </ul>
-                </div>
-
-                <div class="team-roster">
-                    <h4>Recommended Team & Responsibilities</h4>
-                    <ul>
-                        <li><strong>Executive Sponsor / Head of Product</strong> — Owns outcomes, business value, and budget approvals. Escalation path for cross-org blockers.</li>
-                        <li><strong>Implementation Lead / Program Manager</strong> — Coordinates sprints, risk register, delivery owner for timelines and cross-team dependencies.</li>
-                        <li><strong>ML Engineers / Data Scientists</strong> — Model development, validation, retraining schedule, experiment logs, and performance SLIs.</li>
-                        <li><strong>Data Engineering Lead</strong> — Data pipelines, ETL reliability, data quality metrics, schema governance, and backfill coordination.</li>
-                        <li><strong>DevOps / Platform Engineer</strong> — Provisioning, infra-as-code, quotas, limits, autoscaling, cost-tagging, and CI/CD pipelines.</li>
-                        <li><strong>SRE / On-call</strong> — Service reliability, incident response, runbooks, and postmortems.</li>
-                        <li><strong>Security &amp; Compliance</strong> — Threat model reviews, privacy risk assessments, audit readiness, and policy enforcement.</li>
-                        <li><strong>Finance / Cost Owner</strong> — Tracks billing, budgets, forecasts, chargeback, and cost-optimization opportunities.</li>
-                        <li><strong>Legal / Procurement</strong> — Contract terms, SLAs, vendor lock-in clauses, and procurement approvals.</li>
-                        <li><strong>Customer / Business Stakeholder</strong> — Accepts value, provides domain context, and prioritizes features based on business outcomes.</li>
-                    </ul>
-                </div>
-
-                <div class="meeting-checklists">
-                    <h4>Per-Meeting Minimal Checklist (copyable)</h4>
-                    <h5>Daily Standup Checklist</h5>
-                    <ul>
-                        <li>Are there any P0/P1 incidents? If yes, who owns the ticket and what is ETA?</li>
-                        <li>Any abnormal cost or quota alerts since last check?</li>
-                        <li>Any failed data pipelines or model jobs? When will they be resolved?</li>
-                        <li>Any urgent production rollbacks required?</li>
-                        <li>Blockers for releases this week?</li>
-                    </ul>
-
-                    <h5>Weekly Operational Review Checklist</h5>
-                    <ul>
-                        <li>Top 3 incidents and status (owner + remediation ETA).</li>
-                        <li>Weekly cost delta vs forecast (show % over/under and drivers).</li>
-                        <li>Model performance delta vs baseline (metrics + drift flags).</li>
-                        <li>Open security/compliance findings and remediation plan.</li>
-                        <li>Upcoming infra changes or vendor contract renewals.</li>
-                    </ul>
-
-                    <h5>Monthly Steering Checklist</h5>
-                    <ul>
-                        <li>Budget burn vs plan and forecasted run rate for next 3 months.</li>
-                        <li>Delivery progress vs roadmap (milestones completed vs expected).</li>
-                        <li>Business KPIs: early value signals and confidence level in ROI projections.</li>
-                        <li>Risk register review (top 5 risks, mitigation status, owner).</li>
-                        <li>Decision points: scale/stop/pivot recommendations and executive approvals required.</li>
-                    </ul>
-                </div>
-
-                <div class="playbook-samples">
-                    <h4>Quick Playbook: If you see a cost spike</h4>
-                    <ol>
-                        <li>Immediately run the cost dashboard (Finance &amp; DevOps) and correlate with API keys, endpoints, and recent deployments.</li>
-                        <li>Identify top 3 resource consumers (model, dataset, or query pattern).</li>
-                        <li>Apply short-term throttle or per-key limits if supported (disable problematic keys) and notify the owning team.</li>
-                        <li>Open a joint incident with Finance, DevOps, and ML owner; estimate incremental spend and mitigation ETA.</li>
-                        <li>Within 48 hours: commit to a corrective action plan (e.g., cache layer, rate-limit, retrain to reduce token usage, or change batch size) and update the monthly budget forecast.</li>
-                    </ol>
-                </div>
-            </section>
-
-            <!-- Cost Controls: Budgets & Abuse Detection -->
-            <!-- AI Solutioning Path -->
-            <section id="ai-solutioning" class="section">
-                <h3>🛠️ AI Solutioning Path: Practical Steps from Problem to Production</h3>
-
-                <p>This is a concrete, repeatable path for designing, validating, and operating AI solutions inside an enterprise. The path maps to the phases already described in this document (Discovery → Data Prep → Integration → Testing → Deployment → Optimization) and adds explicit decision gates, artifacts, and success criteria at each step.</p>
-
-                <h4>Overview — Seven-step path</h4>
-                <ol>
-                    <li>Problem Framing & Value Hypothesis</li>
-                    <li>Feasibility & Risk Assessment</li>
-                    <li>Data & Infrastructure Readiness</li>
-                    <li>Proof of Concept (PoC) / Prototype</li>
-                    <li>Pilot (Controlled Rollout)</li>
-                    <li>Production Launch & Hardening</li>
-                    <li>Operate, Measure & Optimize</li>
-                </ol>
-
-                <h4>Step 1 — Problem Framing & Value Hypothesis (Phase: Discovery)</h4>
-                <ul>
-                    <li>Goal: Define the business problem, measurable success metrics (KPIs), and a falsifiable value hypothesis (e.g., reduce processing time by 30% or increase revenue per user by $X).</li>
-                    <li>Artifacts: Business requirements doc, KPI definition sheet (metric, owner, baseline, target), stakeholder map, success criteria and exit criteria.</li>
-                    <li>Decision gate: Proceed only if the expected value outweighs estimated costs (include contingency multiplier) and a sponsor commits to funding the PoC phase.</li>
-                </ul>
-
-                <h4>Step 2 — Feasibility & Risk Assessment (Phase: Discovery → Data Preparation)</h4>
-                <ul>
-                    <li>Goal: Rapidly validate technical and regulatory feasibility: label availability, data quality, latency requirements, PII/regulatory constraints, and model-fit for the problem.</li>
-                    <li>Artifacts: Feasibility checklist, risk register (privacy, security, compliance, vendor lock-in, cost), quick POC experiment plan, preliminary cost forecast (including 3x multiplier).</li>
-                    <li>Decision gate: Continue to Prototype if data coverage & quality meet minimal thresholds, no showstopper compliance restrictions exist, and cost/ROI remain plausible.</li>
-                </ul>
-
-                <h4>Step 3 — Data & Infrastructure Readiness (Phase: Data Preparation → Integration)</h4>
-                <ul>
-                    <li>Goal: Ensure pipelines, schemas, and infra exist to support experiments and a future production flow. Include observability and cost tagging from day one.</li>
-                    <li>Artifacts: Data contract, ingestion pipelines, sampling plan, data labeling plan, infra bill-of-materials (compute, storage, network), cost attribution tags, and monitoring hooks for token and compute use.</li>
-                    <li>Decision gate: Green for PoC when pipeline reliability >95% for sampled datasets and telemetry for cost/performance is streaming to a centralized system.</li>
-                </ul>
-
-                <h4>Step 4 — Proof of Concept / Prototype (Phase: Data Preparation → Integration → Testing)</h4>
-                <ul>
-                    <li>Goal: Build a narrow-scope prototype that demonstrates the value hypothesis with minimal scope and full telemetry for measuring KPIs and costs.</li>
-                    <li>Artifacts: Prototype code repo with infra-as-code, sample datasets, evaluation notebook, baseline vs prototype metric comparisons, SLOs/SLIs, and a replayable experiment script.</li>
-                    <li>Success criteria: Prototype meets or makes a credible case for achieving predefined KPI uplift and operates within an acceptable cost envelope for pilot scaling.</li>
-                    <li>Decision gate: Move to Pilot only if prototype demonstrates stable metrics and no unresolved critical risks (security, privacy, or cost explosion).</li>
-                </ul>
-
-                <h4>Step 5 — Pilot (Phase: Testing → Deployment)</h4>
-                <ul>
-                    <li>Goal: Run a controlled pilot with real users or production traffic slices to validate performance, UX, monitoring, and operational costs.</li>
-                    <li>Artifacts: Pilot runbook, rollout plan (canary percentages), monitoring dashboards (latency, error rate, cost-by-feature), incident playbook, and A/B evaluation reports.</li>
-                    <li>Success criteria: Business KPI movement consistent with PoC, stable model behavior, acceptable cost-per-user, and no high-severity security/compliance incidents.</li>
-                    <li>Decision gate: Approve production launch if pilot meets success criteria AND leadership approves funding for full launch and ongoing ops budget.</li>
-                </ul>
-
-                <h4>Step 6 — Production Launch & Hardening (Phase: Deployment)</h4>
-                <ul>
-                    <li>Goal: Harden infra and processes for 24/7 operation: observability, SLO enforcement, rollback procedures, access controls, key management, and cost controls.</li>
-                    <li>Artifacts: Runbooks, SLO/SLA docs, incident response playbooks, automated scaling policies, quota enforcement, billing alarms, and post-launch verification checklist.</li>
-                    <li>Success criteria: Meet SLO targets, predictable cost trajectories, trained on-call rotations, and completed security/compliance attestations.</li>
-                </ul>
-
-                <h4>Step 7 — Operate, Measure & Optimize (Phase: Optimization & Governance)</h4>
-                <ul>
-                    <li>Goal: Continuous improvement loop: monitor KPI correlation to model changes, manage model drift, retrain cadences, and cost-optimization initiatives.</li>
-                    <li>Artifacts: Continuous evaluation dashboards, retrain schedule and triggers, feature-importance drift alerts, cost optimization tickets, and quarterly ROI reviews.</li>
-                    <li>Decision gate: If ROI signals are poor after a defined optimization window (e.g., 3 months post-launch), consider rollback or scope-reduction; escalate to sponsor for go/no-go.</li>
-                </ul>
-
-                <h4>Cross-cutting decision gates & templates</h4>
-                <ul>
-                    <li><strong>Go/No-Go Template (PoC → Pilot):</strong> KPI deltas, cost-per-user, top-5 risks, compliance status, and sponsor sign-off.</li>
-                    <li><strong>Pilot → Prod Checklist:</strong> 99% schema compatibility, telemetry coverage, budget forecast signed, incident contacts listed, and legal sign-off for data use.</li>
-                    <li><strong>Cost Gate:</strong> Any projected monthly run-rate > 120% of forecast must be approved by Finance + Sponsor and include a mitigation plan before scaling.</li>
-                </ul>
-
-                <h4>How this maps to the document phases</h4>
-                <ul>
-                    <li>Phase 0-1: Problem Framing & Feasibility</li>
-                    <li>Phase 2: Data Preparation & Pipeline Readiness</li>
-                    <li>Phase 3: Integration & Prototype</li>
-                    <li>Phase 4: Testing, Pilot & Validation</li>
-                    <li>Phase 5-6: Deployment, Optimization & Governance</li>
-                </ul>
-
-                <h4>Practical tips & traps</h4>
-                <ul>
-                    <li>Start small and instrument heavily — telemetry is your single best defense against surprises.</li>
-                    <li>Lock in cost observability before scaling; never scale a model without a clear cost-per-unit metric.</li>
-                    <li>Use synthetic traffic to validate autoscaling and throttles before production traffic.</li>
-                    <li>Keep rollback fast: immutable deployments and feature flags reduce blast radius.</li>
-                    <li>Document everything — artifact handoffs between phases avoid knowledge loss and speed audits.</li>
-                </ul>
-            </section>
-            <section id="cost-controls" class="section">
-                <h3>💳 Cost Controls, Budgets & Abuse Detection</h3>
-                <p>Preventing runaway usage and cost abuse is a core operational requirement for any AI deployment. This subsection outlines practical, vendor-agnostic controls, platform-specific tooling, monitoring patterns, and governance policies you can implement today to limit financial risk while preserving developer productivity.</p>
-
-                <h4>SaaS API & Token-Level Controls</h4>
-                <ul>
-                    <li><strong>Enforce per-key quotas and rate limits:</strong> Require every application, service, and team to use unique API keys. Configure per-key daily/monthly request and token quotas and hard rate limits at the API gateway level. Audit keys regularly and rotate on a schedule. <a href="#ref-123" class="citation">[123]</a></li>
-                    <li><strong>Implement usage tiers and throttling:</strong> Allow higher throughput for production keys, strict limits for experimental keys, and automatic throttling when approaching budget thresholds. Configure exponential backoff and client-side retries to avoid sudden spikes.</li>
-                    <li><strong>Token accounting:</strong> Instrument each request with token counts (input + output). Log token usage per user, team, and API key to a central billing event stream for near-real-time aggregation and alerting. Use this stream to build anomaly detection for token spikes.</li>
-                    <li><strong>Chargeback & visibility:</strong> Feed per-key usage into internal billing dashboards so teams see their real costs. Chargeback creates natural incentives to avoid wasteful prompts and high-temperature, high-token responses.</li>
-                </ul>
-
-                <h4>Cloud Provider Budgets & Automated Actions</h4>
-                <p>Use native cloud billing controls to enforce hard and soft budget thresholds and automate actions when budgets are exceeded:</p>
-                <ul>
-                    <li><strong>AWS:</strong> AWS Budgets + Cost Anomaly Detection (AWS Cost Management) can trigger SNS notifications, Lambda functions, or Service Catalog actions to scale down resources or shut off non-critical stacks when thresholds are reached <a href="#ref-120" class="citation">[120]</a> · <a href="#ref-31" class="citation">[31]</a>.</li>
-                    <li><strong>Azure:</strong> Azure Cost Management + Budgets supports alerts, action groups, and automation runbooks to quarantine or stop deployments consuming excess credits <a href="#ref-121" class="citation">[121]</a>.</li>
-                    <li><strong>GCP:</strong> Cloud Billing Budgets with Pub/Sub notifications can drive Cloud Functions that throttle or disable endpoints, and Cloud Billing Export enables fine-grained cost attribution for anomaly detection <a href="#ref-122" class="citation">[122]</a>.</li>
-                </ul>
-
-                <h4>Monitoring, Alerts & Anomaly Detection</h4>
-                <ul>
-                    <li><strong>Centralized metrics pipeline:</strong> Export usage and billing events (API tokens, GPU hours, network egress) into a centralized telemetry system (Datadog, Prometheus + Grafana, Splunk). Correlate token usage with application events to attribute cost to features and teams <a href="#ref-124" class="citation">[124]</a>.</li>
-                    <li><strong>Real-time anomaly detection:</strong> Build statistical or ML-based detectors that watch token-rate per key, cost-per-minute, or GPU-utilization spikes. When anomalies exceed a confidence threshold, trigger automated mitigation (quota reduction, key disable) and paging to on-call.</li>
-                    <li><strong>Alerting strategy:</strong> Use multi-tier alerts: informational (75% of budget), corrective (90% — notify owners), automated-enforcement (100% — apply throttles/shutdown), and post-mortem (billing spike detected → create incident and RCA).</li>
-                </ul>
-
-                <h4>Governance, Policies & Example Controls</h4>
-                <ul>
-                    <li><strong>Policy examples:</strong> (a) No unrestricted high-temperature generation in production. (b) Default max tokens per request = 512. (c) Experimental endpoints run on limited keys with daily token caps. (d) All high-cost features require a business case and budget sign-off.</li>
-                    <li><strong>Operational playbook:</strong> Document a runbook describing detection → mitigation → communication → remediation steps for cost incidents. Include contact list, rollback procedures, and how to re-enable keys safely after RCA.</li>
-                    <li><strong>Developer tooling:</strong> Provide SDK wrappers that enforce company quotas client-side, fail fast with clear error messages, and report usage metadata (feature, ticket id, owner) to billing events.</li>
-                </ul>
-
-                <div class="reality-box">
-                    <h4>Quick Checklist</h4>
-                    <ol>
-                        <li>Unique API keys per team/service with per-key quotas</li>
-                        <li>Cloud Budgets + automated enforcement (AWS/Azure/GCP)</li>
-                        <li>Centralized telemetry for tokens, GPU hours, and egress</li>
-                        <li>Automated anomaly detection and automated throttles</li>
-                        <li>Chargeback dashboards and team-level visibility</li>
-                        <li>Runbook + post-incident RCA requirement</li>
-                    </ol>
-                    <p>References and platform docs at the end of this document provide direct links to vendor tooling and best-practice guides (<a href="#ref-120" class="citation">[120]</a>, <a href="#ref-121" class="citation">[121]</a>, <a href="#ref-122" class="citation">[122]</a>, <a href="#ref-123" class="citation">[123]</a>, <a href="#ref-124" class="citation">[124]</a>, <a href="#ref-125" class="citation">[125]</a>).</p>
-                </div>
-            </section>
-
             <!-- Reality Check Section -->
             <section id="reality-check" class="section">
                 <h2>🔍 Reality Check: What Research Reveals</h2>
@@ -2355,6 +2098,148 @@
                 </div>
             </section>
 
+                        <!-- Cost Controls: Budgets & Abuse Detection -->
+            <!-- AI Solutioning Path -->
+            <section id="ai-solutioning" class="section">
+                <h3>🛠️ AI Solutioning Path: Practical Steps from Problem to Production</h3>
+
+                <p>This is a concrete, repeatable path for designing, validating, and operating AI solutions inside an enterprise. The path maps to the phases already described in this document (Discovery → Data Prep → Integration → Testing → Deployment → Optimization) and adds explicit decision gates, artifacts, and success criteria at each step.</p>
+
+                <h4>Overview — Seven-step path</h4>
+                <ol>
+                    <li>Problem Framing & Value Hypothesis</li>
+                    <li>Feasibility & Risk Assessment</li>
+                    <li>Data & Infrastructure Readiness</li>
+                    <li>Proof of Concept (PoC) / Prototype</li>
+                    <li>Pilot (Controlled Rollout)</li>
+                    <li>Production Launch & Hardening</li>
+                    <li>Operate, Measure & Optimize</li>
+                </ol>
+
+                <h4>Step 1 — Problem Framing & Value Hypothesis (Phase: Discovery)</h4>
+                <ul>
+                    <li>Goal: Define the business problem, measurable success metrics (KPIs), and a falsifiable value hypothesis (e.g., reduce processing time by 30% or increase revenue per user by $X).</li>
+                    <li>Artifacts: Business requirements doc, KPI definition sheet (metric, owner, baseline, target), stakeholder map, success criteria and exit criteria.</li>
+                    <li>Decision gate: Proceed only if the expected value outweighs estimated costs (include contingency multiplier) and a sponsor commits to funding the PoC phase.</li>
+                </ul>
+
+                <h4>Step 2 — Feasibility & Risk Assessment (Phase: Discovery → Data Preparation)</h4>
+                <ul>
+                    <li>Goal: Rapidly validate technical and regulatory feasibility: label availability, data quality, latency requirements, PII/regulatory constraints, and model-fit for the problem.</li>
+                    <li>Artifacts: Feasibility checklist, risk register (privacy, security, compliance, vendor lock-in, cost), quick POC experiment plan, preliminary cost forecast (including 3x multiplier).</li>
+                    <li>Decision gate: Continue to Prototype if data coverage & quality meet minimal thresholds, no showstopper compliance restrictions exist, and cost/ROI remain plausible.</li>
+                </ul>
+
+                <h4>Step 3 — Data & Infrastructure Readiness (Phase: Data Preparation → Integration)</h4>
+                <ul>
+                    <li>Goal: Ensure pipelines, schemas, and infra exist to support experiments and a future production flow. Include observability and cost tagging from day one.</li>
+                    <li>Artifacts: Data contract, ingestion pipelines, sampling plan, data labeling plan, infra bill-of-materials (compute, storage, network), cost attribution tags, and monitoring hooks for token and compute use.</li>
+                    <li>Decision gate: Green for PoC when pipeline reliability >95% for sampled datasets and telemetry for cost/performance is streaming to a centralized system.</li>
+                </ul>
+
+                <h4>Step 4 — Proof of Concept / Prototype (Phase: Data Preparation → Integration → Testing)</h4>
+                <ul>
+                    <li>Goal: Build a narrow-scope prototype that demonstrates the value hypothesis with minimal scope and full telemetry for measuring KPIs and costs.</li>
+                    <li>Artifacts: Prototype code repo with infra-as-code, sample datasets, evaluation notebook, baseline vs prototype metric comparisons, SLOs/SLIs, and a replayable experiment script.</li>
+                    <li>Success criteria: Prototype meets or makes a credible case for achieving predefined KPI uplift and operates within an acceptable cost envelope for pilot scaling.</li>
+                    <li>Decision gate: Move to Pilot only if prototype demonstrates stable metrics and no unresolved critical risks (security, privacy, or cost explosion).</li>
+                </ul>
+
+                <h4>Step 5 — Pilot (Phase: Testing → Deployment)</h4>
+                <ul>
+                    <li>Goal: Run a controlled pilot with real users or production traffic slices to validate performance, UX, monitoring, and operational costs.</li>
+                    <li>Artifacts: Pilot runbook, rollout plan (canary percentages), monitoring dashboards (latency, error rate, cost-by-feature), incident playbook, and A/B evaluation reports.</li>
+                    <li>Success criteria: Business KPI movement consistent with PoC, stable model behavior, acceptable cost-per-user, and no high-severity security/compliance incidents.</li>
+                    <li>Decision gate: Approve production launch if pilot meets success criteria AND leadership approves funding for full launch and ongoing ops budget.</li>
+                </ul>
+
+                <h4>Step 6 — Production Launch & Hardening (Phase: Deployment)</h4>
+                <ul>
+                    <li>Goal: Harden infra and processes for 24/7 operation: observability, SLO enforcement, rollback procedures, access controls, key management, and cost controls.</li>
+                    <li>Artifacts: Runbooks, SLO/SLA docs, incident response playbooks, automated scaling policies, quota enforcement, billing alarms, and post-launch verification checklist.</li>
+                    <li>Success criteria: Meet SLO targets, predictable cost trajectories, trained on-call rotations, and completed security/compliance attestations.</li>
+                </ul>
+
+                <h4>Step 7 — Operate, Measure & Optimize (Phase: Optimization & Governance)</h4>
+                <ul>
+                    <li>Goal: Continuous improvement loop: monitor KPI correlation to model changes, manage model drift, retrain cadences, and cost-optimization initiatives.</li>
+                    <li>Artifacts: Continuous evaluation dashboards, retrain schedule and triggers, feature-importance drift alerts, cost optimization tickets, and quarterly ROI reviews.</li>
+                    <li>Decision gate: If ROI signals are poor after a defined optimization window (e.g., 3 months post-launch), consider rollback or scope-reduction; escalate to sponsor for go/no-go.</li>
+                </ul>
+
+                <h4>Cross-cutting decision gates & templates</h4>
+                <ul>
+                    <li><strong>Go/No-Go Template (PoC → Pilot):</strong> KPI deltas, cost-per-user, top-5 risks, compliance status, and sponsor sign-off.</li>
+                    <li><strong>Pilot → Prod Checklist:</strong> 99% schema compatibility, telemetry coverage, budget forecast signed, incident contacts listed, and legal sign-off for data use.</li>
+                    <li><strong>Cost Gate:</strong> Any projected monthly run-rate > 120% of forecast must be approved by Finance + Sponsor and include a mitigation plan before scaling.</li>
+                </ul>
+
+                <h4>How this maps to the document phases</h4>
+                <ul>
+                    <li>Phase 0-1: Problem Framing & Feasibility</li>
+                    <li>Phase 2: Data Preparation & Pipeline Readiness</li>
+                    <li>Phase 3: Integration & Prototype</li>
+                    <li>Phase 4: Testing, Pilot & Validation</li>
+                    <li>Phase 5-6: Deployment, Optimization & Governance</li>
+                </ul>
+
+                <h4>Practical tips & traps</h4>
+                <ul>
+                    <li>Start small and instrument heavily — telemetry is your single best defense against surprises.</li>
+                    <li>Lock in cost observability before scaling; never scale a model without a clear cost-per-unit metric.</li>
+                    <li>Use synthetic traffic to validate autoscaling and throttles before production traffic.</li>
+                    <li>Keep rollback fast: immutable deployments and feature flags reduce blast radius.</li>
+                    <li>Document everything — artifact handoffs between phases avoid knowledge loss and speed audits.</li>
+                </ul>
+            </section>
+            <section id="cost-controls" class="section">
+                <h3>💳 Cost Controls, Budgets & Abuse Detection</h3>
+                <p>Preventing runaway usage and cost abuse is a core operational requirement for any AI deployment. This subsection outlines practical, vendor-agnostic controls, platform-specific tooling, monitoring patterns, and governance policies you can implement today to limit financial risk while preserving developer productivity.</p>
+
+                <h4>SaaS API & Token-Level Controls</h4>
+                <ul>
+                    <li><strong>Enforce per-key quotas and rate limits:</strong> Require every application, service, and team to use unique API keys. Configure per-key daily/monthly request and token quotas and hard rate limits at the API gateway level. Audit keys regularly and rotate on a schedule. <a href="#ref-123" class="citation">[123]</a></li>
+                    <li><strong>Implement usage tiers and throttling:</strong> Allow higher throughput for production keys, strict limits for experimental keys, and automatic throttling when approaching budget thresholds. Configure exponential backoff and client-side retries to avoid sudden spikes.</li>
+                    <li><strong>Token accounting:</strong> Instrument each request with token counts (input + output). Log token usage per user, team, and API key to a central billing event stream for near-real-time aggregation and alerting. Use this stream to build anomaly detection for token spikes.</li>
+                    <li><strong>Chargeback & visibility:</strong> Feed per-key usage into internal billing dashboards so teams see their real costs. Chargeback creates natural incentives to avoid wasteful prompts and high-temperature, high-token responses.</li>
+                </ul>
+
+                <h4>Cloud Provider Budgets & Automated Actions</h4>
+                <p>Use native cloud billing controls to enforce hard and soft budget thresholds and automate actions when budgets are exceeded:</p>
+                <ul>
+                    <li><strong>AWS:</strong> AWS Budgets + Cost Anomaly Detection (AWS Cost Management) can trigger SNS notifications, Lambda functions, or Service Catalog actions to scale down resources or shut off non-critical stacks when thresholds are reached <a href="#ref-120" class="citation">[120]</a> · <a href="#ref-31" class="citation">[31]</a>.</li>
+                    <li><strong>Azure:</strong> Azure Cost Management + Budgets supports alerts, action groups, and automation runbooks to quarantine or stop deployments consuming excess credits <a href="#ref-121" class="citation">[121]</a>.</li>
+                    <li><strong>GCP:</strong> Cloud Billing Budgets with Pub/Sub notifications can drive Cloud Functions that throttle or disable endpoints, and Cloud Billing Export enables fine-grained cost attribution for anomaly detection <a href="#ref-122" class="citation">[122]</a>.</li>
+                </ul>
+
+                <h4>Monitoring, Alerts & Anomaly Detection</h4>
+                <ul>
+                    <li><strong>Centralized metrics pipeline:</strong> Export usage and billing events (API tokens, GPU hours, network egress) into a centralized telemetry system (Datadog, Prometheus + Grafana, Splunk). Correlate token usage with application events to attribute cost to features and teams <a href="#ref-124" class="citation">[124]</a>.</li>
+                    <li><strong>Real-time anomaly detection:</strong> Build statistical or ML-based detectors that watch token-rate per key, cost-per-minute, or GPU-utilization spikes. When anomalies exceed a confidence threshold, trigger automated mitigation (quota reduction, key disable) and paging to on-call.</li>
+                    <li><strong>Alerting strategy:</strong> Use multi-tier alerts: informational (75% of budget), corrective (90% — notify owners), automated-enforcement (100% — apply throttles/shutdown), and post-mortem (billing spike detected → create incident and RCA).</li>
+                </ul>
+
+                <h4>Governance, Policies & Example Controls</h4>
+                <ul>
+                    <li><strong>Policy examples:</strong> (a) No unrestricted high-temperature generation in production. (b) Default max tokens per request = 512. (c) Experimental endpoints run on limited keys with daily token caps. (d) All high-cost features require a business case and budget sign-off.</li>
+                    <li><strong>Operational playbook:</strong> Document a runbook describing detection → mitigation → communication → remediation steps for cost incidents. Include contact list, rollback procedures, and how to re-enable keys safely after RCA.</li>
+                    <li><strong>Developer tooling:</strong> Provide SDK wrappers that enforce company quotas client-side, fail fast with clear error messages, and report usage metadata (feature, ticket id, owner) to billing events.</li>
+                </ul>
+
+                <div class="reality-box">
+                    <h4>Quick Checklist</h4>
+                    <ol>
+                        <li>Unique API keys per team/service with per-key quotas</li>
+                        <li>Cloud Budgets + automated enforcement (AWS/Azure/GCP)</li>
+                        <li>Centralized telemetry for tokens, GPU hours, and egress</li>
+                        <li>Automated anomaly detection and automated throttles</li>
+                        <li>Chargeback dashboards and team-level visibility</li>
+                        <li>Runbook + post-incident RCA requirement</li>
+                    </ol>
+                    <p>References and platform docs at the end of this document provide direct links to vendor tooling and best-practice guides (<a href="#ref-120" class="citation">[120]</a>, <a href="#ref-121" class="citation">[121]</a>, <a href="#ref-122" class="citation">[122]</a>, <a href="#ref-123" class="citation">[123]</a>, <a href="#ref-124" class="citation">[124]</a>, <a href="#ref-125" class="citation">[125]</a>).</p>
+                </div>
+            </section>
+
             <!-- Recommendations -->
             <section id="recommendations" class="section">
                 <h2>🎯 Evidence-Based Recommendations</h2>
@@ -2380,6 +2265,121 @@
                     </ul>
                     
                     <p><strong>The Bottom Line:</strong> AI implementation is not inevitable or universally beneficial. Many organizations will be better served by waiting 2-3 years for the technology and regulatory landscape to mature, costs to decrease, and failure patterns to be better understood.</p>
+                </div>
+            </section>
+
+                        <!-- Touch-base cadence & team responsibilities -->
+            <section id="touch-bases" class="section">
+                <h3>🔁 Touch-base Cadence & Team Responsibilities (Operations + Implementation)</h3>
+
+                <p>Successful AI deployments require tight operational discipline. Below is a practical, phase-aware cadence (daily / weekly / monthly) and a recommended team roster with clear responsibilities and exactly what to ask each role during each meeting.</p>
+
+                <div class="touch-cadence">
+                    <h4>Cadence (What to run and who should attend)</h4>
+
+                    <h5>Daily (15–30 minutes) — Standup / Incident Triage</h5>
+                    <ul>
+                        <li>Attendees: Implementation lead, DevOps/Platform engineer, SRE, ML engineer on-call, Product owner (optional)</li>
+                        <li>Purpose: Rapid status, active incidents, usage spikes, failed jobs, model-serving latency/errors, budget burn alerts.</li>
+                        <li>What to ask whom:
+                            <ul>
+                                <li>To DevOps/SRE: "Any alerts or spikes since yesterday? Any failed deployments or scaling issues?"</li>
+                                <li>To ML Engineer: "Any model degradation or training job failures? Any data pipeline backfills pending?"</li>
+                                <li>To Implementation Lead: "Any blocker that needs escalation to Product or Security?"</li>
+                                <li>To Product Owner: "Customer-impacting issues today? Prioritize fixes?"</li>
+                            </ul>
+                        </li>
+                        <li>Action window: Triage tickets, mute non-critical alerts, escalate high-severity incidents immediately.</li>
+                    </ul>
+
+                    <h5>Weekly (30–60 minutes) — Operational Review</h5>
+                    <ul>
+                        <li>Attendees: Implementation lead, Product owner, ML engineers, DevOps lead, SRE lead, Security/Compliance rep, Finance (cost owner) — rotating depending on topic.</li>
+                        <li>Purpose: Short-term health, feature deployment readiness, backlog grooming, cost/budget snapshot, anomaly review.</li>
+                        <li>What to ask whom:
+                            <ul>
+                                <li>To Finance/Cost Owner: "This week's cost delta vs budget; any unexpected spend? Any new chargeback items?"</li>
+                                <li>To DevOps/Platform: "Any resource quota risks, service limits reached, or planned infra changes?"</li>
+                                <li>To ML Team: "Any model performance regressions, retrain schedules, or data drift flags?"</li>
+                                <li>To Security/Compliance: "Any open findings, privacy incidents, or audit prep items?"</li>
+                                <li>To Product: "Are current priorities aligned with business value targets? Any customer escalations?"</li>
+                            </ul>
+                        </li>
+                        <li>Action window: Adjust weekly sprint priorities, open budget/usage tickets, schedule deeper post-mortems if anomalies found.</li>
+                    </ul>
+
+                    <h5>Monthly (60–90 minutes) — Operational Steering & Budget Review</h5>
+                    <ul>
+                        <li>Attendees: Head of Product (or Sponsor), Implementation lead, Head of Engineering, Finance/Cost Owner, Security/Compliance lead, Data Engineering lead, Business stakeholder(s).</li>
+                        <li>Purpose: Strategic review: cost vs budget, SLA/uptime trends, feature value progress, ROI tracking, risk & compliance posture.</li>
+                        <li>What to ask whom:
+                            <ul>
+                                <li>To Finance: "Cumulative spend vs monthly/quarterly budget; forecast for next period; biggest cost drivers."</li>
+                                <li>To Implementation Lead: "Delivery progress vs roadmap, major blockers, and resource needs for the next quarter."</li>
+                                <li>To Security/Compliance: "Open risks, audit readiness, and any regulatory changes that impact our operating model."</li>
+                                <li>To Data Engineering: "Data pipeline health, backfill status, and estimated effort to address data debt."</li>
+                                <li>To Product/Business: "Are we seeing expected value signals? Any go/no-go decisions required?"</li>
+                            </ul>
+                        </li>
+                        <li>Action window: Rebase budget, approve/deny scale-up requests, trigger contractual or vendor renegotiation, and publish a short executive summary for stakeholders.</li>
+                    </ul>
+                </div>
+
+                <div class="team-roster">
+                    <h4>Recommended Team & Responsibilities</h4>
+                    <ul>
+                        <li><strong>Executive Sponsor / Head of Product</strong> — Owns outcomes, business value, and budget approvals. Escalation path for cross-org blockers.</li>
+                        <li><strong>Implementation Lead / Program Manager</strong> — Coordinates sprints, risk register, delivery owner for timelines and cross-team dependencies.</li>
+                        <li><strong>ML Engineers / Data Scientists</strong> — Model development, validation, retraining schedule, experiment logs, and performance SLIs.</li>
+                        <li><strong>Data Engineering Lead</strong> — Data pipelines, ETL reliability, data quality metrics, schema governance, and backfill coordination.</li>
+                        <li><strong>DevOps / Platform Engineer</strong> — Provisioning, infra-as-code, quotas, limits, autoscaling, cost-tagging, and CI/CD pipelines.</li>
+                        <li><strong>SRE / On-call</strong> — Service reliability, incident response, runbooks, and postmortems.</li>
+                        <li><strong>Security &amp; Compliance</strong> — Threat model reviews, privacy risk assessments, audit readiness, and policy enforcement.</li>
+                        <li><strong>Finance / Cost Owner</strong> — Tracks billing, budgets, forecasts, chargeback, and cost-optimization opportunities.</li>
+                        <li><strong>Legal / Procurement</strong> — Contract terms, SLAs, vendor lock-in clauses, and procurement approvals.</li>
+                        <li><strong>Customer / Business Stakeholder</strong> — Accepts value, provides domain context, and prioritizes features based on business outcomes.</li>
+                    </ul>
+                </div>
+
+                <div class="meeting-checklists">
+                    <h4>Per-Meeting Minimal Checklist (copyable)</h4>
+                    <h5>Daily Standup Checklist</h5>
+                    <ul>
+                        <li>Are there any P0/P1 incidents? If yes, who owns the ticket and what is ETA?</li>
+                        <li>Any abnormal cost or quota alerts since last check?</li>
+                        <li>Any failed data pipelines or model jobs? When will they be resolved?</li>
+                        <li>Any urgent production rollbacks required?</li>
+                        <li>Blockers for releases this week?</li>
+                    </ul>
+
+                    <h5>Weekly Operational Review Checklist</h5>
+                    <ul>
+                        <li>Top 3 incidents and status (owner + remediation ETA).</li>
+                        <li>Weekly cost delta vs forecast (show % over/under and drivers).</li>
+                        <li>Model performance delta vs baseline (metrics + drift flags).</li>
+                        <li>Open security/compliance findings and remediation plan.</li>
+                        <li>Upcoming infra changes or vendor contract renewals.</li>
+                    </ul>
+
+                    <h5>Monthly Steering Checklist</h5>
+                    <ul>
+                        <li>Budget burn vs plan and forecasted run rate for next 3 months.</li>
+                        <li>Delivery progress vs roadmap (milestones completed vs expected).</li>
+                        <li>Business KPIs: early value signals and confidence level in ROI projections.</li>
+                        <li>Risk register review (top 5 risks, mitigation status, owner).</li>
+                        <li>Decision points: scale/stop/pivot recommendations and executive approvals required.</li>
+                    </ul>
+                </div>
+
+                <div class="playbook-samples">
+                    <h4>Quick Playbook: If you see a cost spike</h4>
+                    <ol>
+                        <li>Immediately run the cost dashboard (Finance &amp; DevOps) and correlate with API keys, endpoints, and recent deployments.</li>
+                        <li>Identify top 3 resource consumers (model, dataset, or query pattern).</li>
+                        <li>Apply short-term throttle or per-key limits if supported (disable problematic keys) and notify the owning team.</li>
+                        <li>Open a joint incident with Finance, DevOps, and ML owner; estimate incremental spend and mitigation ETA.</li>
+                        <li>Within 48 hours: commit to a corrective action plan (e.g., cache layer, rate-limit, retrain to reduce token usage, or change batch size) and update the monthly budget forecast.</li>
+                    </ol>
                 </div>
             </section>
 
@@ -2484,7 +2484,7 @@
             </section>
 
             <!-- Conclusion -->
-            <div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; border-radius: 15px; padding: 40px; margin: 40px 0;">
+            <div style="background: linear-gradient(135deg, hsl(210, 87%, 76%) 0%, #cecfd1 100%); color: white; border-radius: 15px; padding: 40px; margin: 40px 0;">
                 <h3 style="color: white; margin-top: 0;">Final Thoughts: Beyond the Hype</h3>
                 <p>This analysis reveals a fundamental disconnect between AI marketing promises and implementation reality. While the technology is genuinely transformative for some use cases, the current market exhibits characteristics of speculative investment with poor risk-adjusted returns for most organizations.</p>
                 
