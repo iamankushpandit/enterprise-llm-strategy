@@ -56,6 +56,8 @@
             margin: 0;
             font-size: 1.1em;
             color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            font-weight: 500;
         }
         
         .nav-bar {
@@ -733,9 +735,8 @@
             <section id="executive-summary" class="section">
                 <h2>📋 Executive Summary: The Empirical Reality</h2>
                 
-                <button class="summary-btn" onclick="toggleSummary('exec-summary')">📝 Show Executive Summary</button>
-                <div id="exec-summary" class="section-summary">
-                    <h4>Key Takeaway</h4>
+                <div class="highlight-box">
+                    <h4>📋 Key Takeaway</h4>
                     <p><strong>Reality Check:</strong> 85% of AI projects fail, costs are 3-5x estimates, timelines are 2-3x longer. Most organizations should wait unless they have >750 users, $1M+ budgets, and 24+ month timelines.</p>
                     <h4>Critical Numbers</h4>
                     <ul>
@@ -2189,79 +2190,12 @@
                         <p>Volume 14, August 2024. <a href="https://www.nature.com/articles/s41558-024-02089-6" target="_blank">doi:10.1038/s41558-024-02089-6</a></p>
                     </div>
                     
-                    <div class="reference-item" id="ref-11">
-                        <h4>[11] <span class="authors">U.S. FDA</span> (<span class="year">2024</span>)</h4>
-                        <p>"AI/ML Software as Medical Device Regulatory Framework"</p>
-                        <p class="journal">FDA Guidance Document</p>
-                        <p>Updated September 2024. <a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices" target="_blank">https://www.fda.gov/medical-devices/aiml-enabled-devices</a></p>
-                    </div>
-                    
-                    <div class="reference-item" id="ref-12">
-                        <h4>[12] <span class="authors">Federal Reserve Board</span> (<span class="year">2024</span>)</h4>
-                        <p>"Model Risk Management for AI Systems in Banking"</p>
-                        <p class="journal">SR 11-7 Updated Guidance</p>
-                        <p>August 2024. <a href="https://www.federalreserve.gov/supervisionreg/srletters/SR1107a1.pdf" target="_blank">https://www.federalreserve.gov/supervisionreg/ai-model-risk</a></p>
-                    </div>
-                    
-                    <div class="reference-item" id="ref-13">
-                        <h4>[13] <span class="authors">EY Global AI Compliance Survey</span> (<span class="year">2024</span>)</h4>
-                        <p>"The True Cost of AI Compliance: Multi-Industry Analysis"</p>
-                        <p class="journal">Ernst & Young Global Limited</p>
-                        <p>September 2024. <a href="https://www.ey.com/en_gl/insights/technology/ai-compliance-cost-analysis" target="_blank">https://www.ey.com/ai-compliance-costs</a></p>
-                    </div>
-                    
-                    <div class="reference-item" id="ref-14">
-                        <h4>[14] <span class="authors">Kumar, S., Thompson, R.</span> (<span class="year">2024</span>)</h4>
-                        <p>"Legacy System Integration Complexity in AI Deployments"</p>
-                        <p class="journal">MIT Sloan Management Review</p>
-                        <p>July 2024. <a href="https://sloanreview.mit.edu/article/legacy-systems-ai-integration/" target="_blank">https://sloanreview.mit.edu/legacy-ai-integration</a></p>
-                    </div>
-                    
-                    <div class="reference-item" id="ref-15">
-                        <h4>[15] <span class="authors">Stanford HAI</span> (<span class="year">2024</span>)</h4>
-                        <p>"The 70% Problem: Data Pipeline Development in Enterprise AI"</p>
-                        <p class="journal">Stanford Human-Centered AI Institute</p>
-                        <p>August 2024. <a href="https://hai.stanford.edu/research/ai-data-preparation" target="_blank">https://hai.stanford.edu/research/ai-data-preparation</a></p>
-                    </div>
-                    
-                    <div class="reference-item" id="ref-16">
-                        <h4>[16] <span class="authors">LinkedIn Economic Graph</span> (<span class="year">2024</span>)</h4>
-                        <p>"Global Talent Shortage in AI and Machine Learning Operations"</p>
-                        <p class="journal">LinkedIn Workforce Report</p>
-                        <p>Q3 2024. <a href="https://economicgraph.linkedin.com/research/ai-talent-shortage" target="_blank">https://economicgraph.linkedin.com/ai-talent</a></p>
-                    </div>
-                    
-                    <div class="reference-item" id="ref-17">
-                        <h4>[17] <span class="authors">O'Reilly AI Adoption Survey</span> (<span class="year">2024</span>)</h4>
-                        <p>"Emerging Roles in AI: Skills, Compensation, and Market Demand"</p>
-                        <p class="journal">O'Reilly Media</p>
-                        <p>September 2024. <a href="https://www.oreilly.com/radar/ai-adoption-in-the-enterprise-2024/" target="_blank">https://www.oreilly.com/ai-adoption-2024</a></p>
-                    </div>
-                    
-                    <div class="reference-item" id="ref-18">
-                        <h4>[18] <span class="authors">OWASP Foundation</span> (<span class="year">2024</span>)</h4>
-                        <p>"Top 10 for LLM Applications v1.1: Prompt Injection Attack Vectors"</p>
-                        <p class="journal">Open Web Application Security Project</p>
-                        <p><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank">https://owasp.org/www-project-top-10-for-large-language-model-applications/</a></p>
-                    </div>
-                    
-                    <div class="reference-item" id="ref-19">
-                        <h4>[19] <span class="authors">Zhang, Y. et al.</span> (<span class="year">2024</span>)</h4>
-                        <p>"Privacy Risks in Large Language Model Deployments"</p>
-                        <p class="journal">Nature Machine Intelligence</p>
-                        <p>Volume 6, July 2024. <a href="https://www.nature.com/articles/s42256-024-00856-7" target="_blank">doi:10.1038/s42256-024-00856-7</a></p>
-                    </div>
-                    
-                    <div class="reference-item" id="ref-20">
-                        <h4>[20] <span class="authors">Anderson, P. et al.</span> (<span class="year">2024</span>)</h4>
-                        <p>"Robustness Evaluation of Production LLM Systems"</p>
-                        <p class="journal">IEEE Security & Privacy</p>
-                        <p>Vol. 22, No. 5, September 2024. <a href="https://ieeexplore.ieee.org/document/10567890" target="_blank">doi:10.1109/MSEC.2024.3456789</a></p>
-                    </div>
+
 
                     <!-- Continue with more references... -->
                     
                     <div class="reference-item" id="ref-82">
+                        <a href="#implementation" class="back-link">↑ Back to Implementation</a>
                         <h4>[82] <span class="authors">Capgemini Research Institute</span> (<span class="year">2024</span>)</h4>
                         <p>"AI Budget Shock: Why Initial Estimates Fail in Enterprise Deployments"</p>
                         <p class="journal">Capgemini Research Institute</p>
@@ -2269,6 +2203,7 @@
                     </div>
 
                     <div class="reference-item" id="ref-87">
+                        <a href="#recommendations" class="back-link">↑ Back to Recommendations</a>
                         <h4>[87] <span class="authors">Harvard Business Review</span> (<span class="year">2024</span>)</h4>
                         <p>"AI as Speculative Investment: Risk-Return Analysis"</p>
                         <p class="journal">Harvard Business Review</p>
@@ -2276,6 +2211,7 @@
                     </div>
 
                     <div class="reference-item" id="ref-89">
+                        <a href="#recommendations" class="back-link">↑ Back to Recommendations</a>
                         <h4>[89] <span class="authors">Forrester Research</span> (<span class="year">2024</span>)</h4>
                         <p>"Minimum Viable AI Budget: What $500K Really Gets You"</p>
                         <p class="journal">Forrester Research</p>
@@ -2283,6 +2219,7 @@
                     </div>
 
                     <div class="reference-item" id="ref-90">
+                        <a href="#recommendations" class="back-link">↑ Back to Recommendations</a>
                         <h4>[90] <span class="authors">Gartner Inc.</span> (<span class="year">2024</span>)</h4>
                         <p>"AI Project Timeline Reality: Why 12 Months Isn't Enough"</p>
                         <p class="journal">Gartner Research</p>
@@ -2290,6 +2227,7 @@
                     </div>
 
                     <div class="reference-item" id="ref-91">
+                        <a href="#recommendations" class="back-link">↑ Back to Recommendations</a>
                         <h4>[91] <span class="authors">Deloitte Consulting</span> (<span class="year">2024</span>)</h4>
                         <p>"AI Skills Crisis: Internal Expertise Requirements for Success"</p>
                         <p class="journal">Deloitte Insights</p>
@@ -2297,6 +2235,7 @@
                     </div>
 
                     <div class="reference-item" id="ref-101">
+                        <a href="#making-the-case" class="back-link">↑ Back to Making Your Case</a>
                         <h4>[101] <span class="authors">CB Insights</span> (<span class="year">2024</span>)</h4>
                         <p>"Competitive AI Advantages: Quantifiable Business Impact Analysis"</p>
                         <p class="journal">CB Insights Research</p>
@@ -2304,6 +2243,7 @@
                     </div>
 
                     <div class="reference-item" id="ref-102">
+                        <a href="#making-the-case" class="back-link">↑ Back to Making Your Case</a>
                         <h4>[102] <span class="authors">PwC Regulatory Services</span> (<span class="year">2024</span>)</h4>
                         <p>"AI for Regulatory Compliance: Efficiency Gains and Implementation"</p>
                         <p class="journal">PwC Global Regulatory Outlook</p>
@@ -2311,6 +2251,7 @@
                     </div>
 
                     <div class="reference-item" id="ref-103">
+                        <a href="#making-the-case" class="back-link">↑ Back to Making Your Case</a>
                         <h4>[103] <span class="authors">IDC Research</span> (<span class="year">2024</span>)</h4>
                         <p>"Proprietary Data Advantages in AI: Competitive Moats Analysis"</p>
                         <p class="journal">IDC Technology Spotlight</p>
@@ -2318,6 +2259,7 @@
                     </div>
 
                     <div class="reference-item" id="ref-110">
+                        <a href="#making-the-case" class="back-link">↑ Back to Making Your Case</a>
                         <h4>[110] <span class="authors">MIT Technology Review</span> (<span class="year">2024</span>)</h4>
                         <p>"85% AI Project Failure Rate: Comprehensive Industry Analysis"</p>
                         <p class="journal">MIT Technology Review</p>
@@ -2325,6 +2267,7 @@
                     </div>
 
                     <div class="reference-item" id="ref-111">
+                        <a href="#making-the-case" class="back-link">↑ Back to Making Your Case</a>
                         <h4>[111] <span class="authors">Georgetown Law Technology Review</span> (<span class="year">2024</span>)</h4>
                         <p>"Incoming AI Regulations: Architecture Change Requirements"</p>
                         <p class="journal">Georgetown Law Technology Review</p>
@@ -2332,6 +2275,7 @@
                     </div>
 
                     <div class="reference-item" id="ref-112">
+                        <a href="#making-the-case" class="back-link">↑ Back to Making Your Case</a>
                         <h4>[112] <span class="authors">Accenture Strategy</span> (<span class="year">2024</span>)</h4>
                         <p>"AI Cost Reality: 3-5x Multiplier Validation Study"</p>
                         <p class="journal">Accenture Strategy & Consulting</p>
