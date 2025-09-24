@@ -1180,66 +1180,66 @@
                     <h3>Decision Flow Diagram</h3>
                     <div class="decision-flow" aria-label="Decision flow diagram">
                         <!-- Inline SVG flow diagram: Start -> Need AI? -> Existing Tools -> Budget/Timeline -> Compliance -> Scale/Expertise -> Outcome -->
-                        <svg width="100%" height="360" viewBox="0 0 1000 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="flowTitle flowDesc">
+                        <svg width="100%" height="500" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="flowTitle flowDesc">
                             <title id="flowTitle">Decision flow for AI adoption</title>
-                            <desc id="flowDesc">A flow diagram guiding whether to proceed with AI, using questions about need, existing tools, budget, compliance, and scale/expertise to reach recommended outcomes.</desc>
+                            <desc id="flowDesc">Flow guiding whether to implement AI, based on need, existing tools, budget, compliance, and expertise.</desc>
+
                             <defs>
                                 <style type="text/css">
-                                    .box { fill: #ffffff; stroke: #2c3e50; stroke-width: 2; rx:8; }
-                                    .text { font-family: Arial, sans-serif; font-size: 14px; fill: #2c3e50; }
-                                    .title { font-weight: bold; font-size: 16px; }
-                                    .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+                                .box { fill: #ffffff; stroke: #2c3e50; stroke-width: 2; rx:8; }
+                                .text { font-family: Arial, sans-serif; font-size: 14px; fill: #2c3e50; }
+                                .title { font-weight: bold; font-size: 16px; }
+                                .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
                                 </style>
                                 <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-                                    <path d="M0,0 L10,3.5 L0,7 z" fill="#2c3e50"/>
+                                <path d="M0,0 L10,3.5 L0,7 z" fill="#2c3e50"/>
                                 </marker>
                             </defs>
 
                             <!-- Start -->
-                            <rect class="box" x="420" y="10" width="160" height="40" />
+                            <rect class="box" x="420" y="10" width="160" height="40"/>
                             <text class="text title" x="500" y="35" text-anchor="middle">Start</text>
 
                             <!-- Need AI? -->
-                            <rect class="box" x="350" y="70" width="300" height="60"/>
+                            <rect class="box" x="300" y="70" width="400" height="60"/>
                             <text class="text" x="500" y="95" text-anchor="middle">Do you REALLY need AI?</text>
-                            <text class="text" x="500" y="115" text-anchor="middle">(will AI uniquely deliver value?)</text>
+                            <text class="text" x="500" y="115" text-anchor="middle">(Will AI uniquely deliver value?)</text>
 
                             <!-- Existing Tools -->
-                            <rect class="box" x="60" y="170" width="300" height="60"/>
-                            <text class="text" x="210" y="195" text-anchor="middle">Can existing tools solve ~80%?</text>
+                            <rect class="box" x="60" y="170" width="280" height="60"/>
+                            <text class="text" x="200" y="195" text-anchor="middle">Can existing tools solve ~80%?</text>
 
                             <!-- Budget/Timeline -->
                             <rect class="box" x="360" y="170" width="280" height="60"/>
                             <text class="text" x="500" y="195" text-anchor="middle">Budget ≥ $500K &amp; Timeline ≥ 18 months?</text>
 
                             <!-- Compliance -->
-                            <rect class="box" x="700" y="170" width="240" height="60"/>
-                            <text class="text" x="820" y="195" text-anchor="middle">Regulatory constraints (HIPAA/PCI/SOX)?</text>
+                            <rect class="box" x="680" y="170" width="260" height="60"/>
+                            <text class="text" x="810" y="195" text-anchor="middle">Regulatory constraints (HIPAA/PCI/SOX)?</text>
 
-                            <!-- Outcomes left -->
-                            <rect class="box" x="60" y="260" width="300" height="60"/>
-                            <text class="text" x="210" y="295" text-anchor="middle">Outcome: Don't implement AI yet<br/>or use small SaaS pilot</text>
+                            <!-- Outcomes -->
+                            <rect class="box" x="60" y="300" width="280" height="70"/>
+                            <text class="text" x="200" y="325" text-anchor="middle">Outcome: Don't implement AI yet</text>
+                            <text class="text" x="200" y="345" text-anchor="middle">or use small SaaS pilot</text>
 
-                            <!-- Outcomes middle -->
-                            <rect class="box" x="360" y="260" width="280" height="60"/>
-                            <text class="text" x="500" y="295" text-anchor="middle">Outcome: Run Pilot (controlled rollout)<br/>Validate cost & performance</text>
+                            <rect class="box" x="360" y="300" width="280" height="70"/>
+                            <text class="text" x="500" y="325" text-anchor="middle">Outcome: Run Pilot (controlled rollout)</text>
+                            <text class="text" x="500" y="345" text-anchor="middle">Validate cost & performance</text>
 
-                            <!-- Outcomes right -->
-                            <rect class="box" x="700" y="260" width="240" height="60"/>
-                            <text class="text" x="820" y="295" text-anchor="middle">Outcome: Consider Self-Host<br/>(if budget & expertise allow)</text>
+                            <rect class="box" x="680" y="300" width="260" height="70"/>
+                            <text class="text" x="810" y="325" text-anchor="middle">Outcome: Consider Self-Host</text>
+                            <text class="text" x="810" y="345" text-anchor="middle">(if budget & expertise allow)</text>
 
                             <!-- Arrows -->
-                            <path class="arrow" d="M500,50 L500,70" />
-                            <path class="arrow" d="M350,130 L200,170" />
-                            <path class="arrow" d="M650,130 L720,170" />
-                            <path class="arrow" d="M500,130 L500,170" />
-                            <path class="arrow" d="M210,230 L210,260" />
-                            <path class="arrow" d="M500,230 L500,260" />
-                            <path class="arrow" d="M820,230 L820,260" />
+                            <path class="arrow" d="M500,50 L500,70"/>
+                            <path class="arrow" d="M500,130 L200,170"/>
+                            <path class="arrow" d="M500,130 L500,170"/>
+                            <path class="arrow" d="M500,130 L810,170"/>
+                            <path class="arrow" d="M200,230 L200,300"/>
+                            <path class="arrow" d="M500,230 L500,300"/>
+                            <path class="arrow" d="M810,230 L810,300"/>
+                            </svg>
 
-                            <!-- Decision connectors (from existing tools back to outcome) -->
-                            <path class="arrow" d="M360,200 L360,200 L360,200" />
-                        </svg>
 
                         <div class="chart-source" style="margin-top:12px;">Flow diagram: A simplified operational decision flow — use this as a guide, not a rigid rule. Questions are ordered left-to-right; preferred outcomes depend on cost, timeline, compliance, and team expertise. For exact thresholds see the Decision Framework text and Cost Analysis section.</div>
                     </div>
