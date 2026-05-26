@@ -11,8 +11,9 @@
             margin: 0;
             padding: 0;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            height: 100vh;
             line-height: 1.6;
+            overflow: hidden;
         }
         
         .container {
@@ -20,7 +21,9 @@
             margin: 0 auto;
             background: white;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
         
         .header {
@@ -28,6 +31,8 @@
             color: #ffffff;
             padding: 40px;
             text-align: center;
+            flex-shrink: 0;
+            z-index: 1001;
         }
         
         .header h1 {
@@ -61,16 +66,19 @@
         }
         
         .nav-bar {
-            position: fixed;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            position: sticky;
+            top: 0;
             background: rgba(52, 73, 94, 0.95);
             backdrop-filter: blur(10px);
-            border-radius: 0 15px 15px 0;
+            border-radius: 0;
             padding: 20px 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 2px 0 20px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+            width: 200px;
+            min-width: 200px;
+            overflow-y: auto;
+            align-self: stretch;
         }
         
         .nav-bar ul {
@@ -118,17 +126,26 @@
         .content {
             padding: 40px;
             margin-left: 0;
+            flex: 1;
+            overflow-y: auto;
+        }
+        
+        .body-wrapper {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            min-height: 0;
         }
         
         @media (min-width: 769px) {
             .content {
-                margin-left: 20px;
+                margin-left: 0;
             }
         }
         
         .section {
             margin-bottom: 80px;
-            scroll-margin-top: 70px;
+            scroll-margin-top: 20px;
         }
         
         .section h2 {
@@ -793,14 +810,19 @@
         }
         
         @media (max-width: 768px) {
+            .body-wrapper {
+                flex-direction: column;
+            }
+            
             .nav-bar {
-                position: fixed;
+                position: sticky;
                 top: 0;
-                left: 0;
-                right: 0;
-                transform: none;
+                width: 100%;
+                min-width: 100%;
                 border-radius: 0;
                 padding: 10px 0;
+                overflow-y: visible;
+                overflow-x: auto;
             }
             
             .nav-bar ul {
@@ -817,7 +839,6 @@
             
             .content {
                 padding: 20px;
-                margin-top: 60px;
             }
             
             .header h1 {
@@ -864,6 +885,7 @@
             </div>
         </div>
         
+        <div class="body-wrapper">
         <nav class="nav-bar">
             <ul>
                 <li><a href="#executive-summary" data-section="executive-summary">Executive Summary</a></li>
@@ -3231,6 +3253,7 @@
                 </div>
             </section>
         </div>
+        </div>
     </div>
 
     <script>
@@ -3528,6 +3551,7 @@
         });
 
         // Smooth scrolling for navigation links
+        const contentContainer = document.querySelector('.content');
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -3547,7 +3571,7 @@
             const navLinks = document.querySelectorAll('.nav-bar a[data-section]');
             
             let currentSection = '';
-            const scrollPosition = window.scrollY + 100;
+            const scrollPosition = contentContainer.scrollTop + 100;
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
@@ -3567,14 +3591,14 @@
         }
         
         // Update active section on scroll
-        window.addEventListener('scroll', updateActiveSection);
+        contentContainer.addEventListener('scroll', updateActiveSection);
         window.addEventListener('load', updateActiveSection);
         
         // Reading progress indicator
         function updateReadingProgress() {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
+            const winScroll = contentContainer.scrollTop;
+            const height = contentContainer.scrollHeight - contentContainer.clientHeight;
+            const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
             
             // Create progress bar if it doesn't exist
             let progressBar = document.getElementById('reading-progress');
@@ -3597,7 +3621,7 @@
             }
         }
         
-        window.addEventListener('scroll', updateReadingProgress);
+        contentContainer.addEventListener('scroll', updateReadingProgress);
         
         // Initialize reading progress
         updateReadingProgress();
