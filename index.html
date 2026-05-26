@@ -960,7 +960,7 @@
                 
                 <div class="highlight-box">
                     <h4>📋 Key Takeaway</h4>
-                    <p><strong>Reality Check:</strong> 85% of AI projects fail, costs are 3-5x estimates, timelines are 2-3x longer. Most organizations should wait unless they have >750 users, $1M+ budgets, and 24+ month timelines.</p>
+                    <p><strong>Reality Check:</strong> 85% of AI projects fail, costs are 3-5x estimates, timelines are 2-3x longer. The right approach depends on your adoption track — from low-risk SaaS productivity tools to regulated, mission-critical systems (see adoption tracks below).</p>
                     <h4>Critical Numbers</h4>
                     <ul>
                         <li>True break-even: 500-750 users (not 250)</li>
@@ -977,6 +977,41 @@
                     <div class="danger-box">
                         <h4>🚨 Evidence-Based Reality Check</h4>
                         <p>Research shows that <a href="#ref-1" class="citation">[1]</a> 85% of AI projects never make it to production, and of those that do, <a href="#ref-2" class="citation">[2]</a> 60% fail to meet business objectives within two years. The AI market exhibits characteristics of speculative bubbles <a href="#ref-3" class="citation">[3]</a> and faces imminent regulatory oversight that will fundamentally reshape deployment strategies <a href="#ref-4" class="citation">[4]</a>.</p>
+                    </div>
+
+                    <div class="highlight-box" style="border-left: 5px solid #3498db; background: #f0f7ff;">
+                        <h4>🔀 Three AI Adoption Tracks</h4>
+                        <p>Not all AI adoption carries the same risk. This framework distinguishes three tracks — the heavy cost and risk analysis in this document applies primarily to Tracks 2 and 3:</p>
+                        <table style="width:100%; border-collapse: collapse; margin-top: 10px; font-size: 0.95em;">
+                            <thead>
+                                <tr style="background: #e8f4fd; text-align: left;">
+                                    <th style="padding: 8px; border: 1px solid #d1d5db;">Track</th>
+                                    <th style="padding: 8px; border: 1px solid #d1d5db;">Examples</th>
+                                    <th style="padding: 8px; border: 1px solid #d1d5db;">Risk Profile</th>
+                                    <th style="padding: 8px; border: 1px solid #d1d5db;">Budget Tier</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #d1d5db;"><strong>Track 1:</strong> SaaS Productivity</td>
+                                    <td style="padding: 8px; border: 1px solid #d1d5db;">Copilot, ChatGPT Enterprise, internal search assistants</td>
+                                    <td style="padding: 8px; border: 1px solid #d1d5db;">Low — vendor-managed, standard data handling</td>
+                                    <td style="padding: 8px; border: 1px solid #d1d5db;">&lt;$100K</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #d1d5db;"><strong>Track 2:</strong> Workflow-Integrated AI</td>
+                                    <td style="padding: 8px; border: 1px solid #d1d5db;">RAG, document processing, customer support, coding workflows</td>
+                                    <td style="padding: 8px; border: 1px solid #d1d5db;">Medium — custom integration, data pipeline, quality assurance</td>
+                                    <td style="padding: 8px; border: 1px solid #d1d5db;">$100K–$1.5M</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #d1d5db;"><strong>Track 3:</strong> Regulated / Mission-Critical AI</td>
+                                    <td style="padding: 8px; border: 1px solid #d1d5db;">Healthcare, finance, legal, safety-critical automation, self-hosting</td>
+                                    <td style="padding: 8px; border: 1px solid #d1d5db;">High — compliance, auditability, self-hosting, long timelines</td>
+                                    <td style="padding: 8px; border: 1px solid #d1d5db;">$1.5M+</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     
                     <h4>Key Findings (Evidence-Adjusted)</h4>
@@ -1170,7 +1205,7 @@
             <section id="risk-assessment" class="section">
                 <h2>⚠️ Comprehensive Risk Assessment</h2>
                 
-                <p>Cost overruns are just one dimension of AI implementation risk. The true challenge lies in the concentration of high-probability, high-impact risks that traditional enterprise risk management frameworks weren't designed to handle. Unlike typical IT projects where risks are distributed and manageable, AI implementations face multiple severe risks simultaneously.</p>
+                <p>Cost overruns are just one dimension of AI implementation risk. The true challenge lies in the concentration of high-likelihood, high-impact risks that traditional enterprise risk management frameworks weren't designed to handle. Unlike typical IT projects where risks are distributed and manageable, AI implementations face multiple severe risks simultaneously.</p>
                 
                 <p>This section maps the complete risk landscape based on documented failures and near-misses from real AI deployments. Understanding these risks isn't about avoiding AI entirely - it's about making informed decisions with realistic risk mitigation strategies rather than hoping for the best.</p>
                 
@@ -1271,6 +1306,11 @@
                 <p>With a clear understanding of costs and risks, we can now build a decision framework grounded in evidence rather than vendor marketing. The framework that follows synthesizes the research findings into actionable decision criteria that help organizations avoid the most common failure patterns.</p>
                 
                 <p>This isn't a simple "yes/no" decision tree - AI implementation success depends on multiple interdependent factors that must be evaluated holistically. The framework provides structured questions and thresholds based on what actually predicts success in real-world deployments.</p>
+
+                <div class="highlight-box" style="border-left: 5px solid #2ecc71; background: #f0fff4;">
+                    <h4>📌 Which Track Are You On?</h4>
+                    <p>The decision flow and cost thresholds below apply mainly to <strong>Track 2 (Workflow-Integrated AI)</strong> and <strong>Track 3 (Regulated / Mission-Critical AI)</strong>. If your organization is only adopting <strong>Track 1 (SaaS Productivity)</strong> tools such as Copilot or ChatGPT Enterprise, you can proceed with standard IT procurement, vendor security review, and usage policies — the heavy cost and risk analysis in this section is not required.</p>
+                </div>
                 
                 <div class="chart-section">
                     <h3>Decision Flow Diagram</h3>
@@ -2420,9 +2460,9 @@
                 </div>
                 
                 <div class="danger-box">
-                    <h3>🔴 Do NOT Implement AI If:</h3>
+                    <h3>🔴 Do NOT Pursue Track 2/3 AI Implementation If:</h3>
                     <ul>
-                        <li><strong>Budget constraint:</strong> Less than <span class="cost-tooltip">$500K<span class="tooltip-content"><strong>Minimum AI Budget Calculation:</strong><br><div class="formula">Infrastructure: $150K/year × 2 years = $300K</div><div class="formula">Personnel: $200K/year × 1.5 FTE × 2 years = $600K</div><div class="formula">Data preparation: $100K</div><div class="formula">Integration: $75K</div><div class="formula">Compliance/audit: $50K</div><div class="formula">Contingency (20%): $225K</div><div class="formula">Total: $1.35M over 24 months</div><strong>$500K insufficient for realistic deployment</strong></span></span> total budget for 18-month project <a href="#ref-89" class="citation">[89]</a></li>
+                        <li><strong>Budget constraint:</strong> Less than <span class="cost-tooltip">$500K<span class="tooltip-content"><strong>Track 3 Reference Budget Calculation:</strong><br><div class="formula">Infrastructure: $150K/year × 2 years = $300K</div><div class="formula">Personnel: $200K/year × 1.5 FTE × 2 years = $600K</div><div class="formula">Data preparation: $100K</div><div class="formula">Integration: $75K</div><div class="formula">Compliance/audit: $50K</div><div class="formula">Contingency (20%): $225K</div><div class="formula">Total: $1.35M over 24 months (Track 3 reference)</div><strong>$500K insufficient for regulated/mission-critical deployment</strong></span></span> total budget for a workflow-integrated (Track 2) or regulated (Track 3) project <a href="#ref-89" class="citation">[89]</a></li>
                         <li><strong>Timeline pressure:</strong> Expecting results in less than 12 months <a href="#ref-90" class="citation">[90]</a></li>
                         <li><strong>Skills shortage:</strong> No internal AI expertise or ability to hire qualified personnel <a href="#ref-91" class="citation">[91]</a></li>
                         <li><strong>Unclear business case:</strong> Cannot articulate specific, measurable value beyond "competitive advantage" or "innovation"</li>
@@ -2430,7 +2470,47 @@
                         <li><strong>Organizational resistance:</strong> Significant cultural or political barriers to technology adoption</li>
                     </ul>
                     
-                    <p><strong>The Bottom Line:</strong> AI implementation is not inevitable or universally beneficial. Many organizations will be better served by waiting 2-3 years for the technology and regulatory landscape to mature, costs to decrease, and failure patterns to be better understood.</p>
+                    <p><strong>The Bottom Line:</strong> Custom or regulated AI implementation is not inevitable or universally beneficial. Many organizations will be better served by starting with Track 1 (SaaS productivity tools) while waiting for the technology and regulatory landscape to mature, costs to decrease, and failure patterns to be better understood.</p>
+                </div>
+
+                <div class="highlight-box" style="border-left: 5px solid #3498db; background: #f0f7ff;">
+                    <h3>💰 Budget Tiers by Adoption Track</h3>
+                    <table style="width:100%; border-collapse: collapse; margin-top: 10px; font-size: 0.95em;">
+                        <thead>
+                            <tr style="background: #e8f4fd; text-align: left;">
+                                <th style="padding: 8px; border: 1px solid #d1d5db;">Budget Range</th>
+                                <th style="padding: 8px; border: 1px solid #d1d5db;">Track</th>
+                                <th style="padding: 8px; border: 1px solid #d1d5db;">Guidance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">&lt;$100K</td>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">Track 1 only</td>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">No custom AI; use approved SaaS productivity tools (Copilot, ChatGPT Enterprise, etc.)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">$100K–$500K</td>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">Track 2 entry</td>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">Narrow pilot only — no production commitment; validate feasibility before scaling</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">$500K–$1.5M</td>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">Track 2</td>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">Workflow-integrated pilot with production option; plan for 18–24 month horizon</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">$1.5M+</td>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">Track 3 entry</td>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">Serious enterprise AI program for regulated or mission-critical use cases</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">$3M+</td>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">Track 3</td>
+                                <td style="padding: 8px; border: 1px solid #d1d5db;">Self-hosting or regulated-domain platform viable; plan for 24–30 month horizon</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
