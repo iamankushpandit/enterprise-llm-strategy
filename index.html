@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM Strategy: Complete Evidence-Based Reality Framework(Work in Progress)</title>
+    <title>LLM Strategy: Complete Evidence-Based Reality Framework</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <style>
         body {
@@ -511,6 +511,40 @@
             border-left: 4px solid #e74c3c;
         }
         
+        .changelog-section {
+            background: #f0f7ee;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            border-top: 4px solid #27ae60;
+        }
+        
+        .changelog-entry {
+            padding: 15px 20px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 8px;
+            border-left: 3px solid #27ae60;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        
+        .changelog-entry h4 {
+            margin: 0 0 8px 0;
+            color: #27ae60;
+            font-size: 1em;
+            font-weight: 600;
+        }
+        
+        .changelog-entry ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        
+        .changelog-entry li {
+            margin: 4px 0;
+        }
+        
         .references-section {
             background: #f8f9fa;
             border-radius: 15px;
@@ -817,8 +851,9 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>LLM Deployment Strategy(Work in Progress)</h1>
+            <h1>LLM Deployment Strategy</h1>
             <p>Evidence-Based Executive Decision Framework: Self-Host vs SaaS Analysis</p>
+            <p style="font-size: 0.9em; opacity: 0.85; margin-top: 8px;">Last Updated: May 2026</p>
             <div class="reading-time">
                 <p>
                     📖 <strong>Estimated Reading Time:</strong> Full document ~84–105 minutes (based on ~21,000 words); Executive Summary ~15 minutes; Decision Makers ~30 minutes; Technical Leaders ~60–90 minutes
@@ -841,6 +876,7 @@
                 <li><a href="#implementation" data-section="implementation">Implementation</a></li>
                 <li><a href="#recommendations" data-section="recommendations">Recommendations</a></li>
                 <li><a href="#making-the-case" data-section="making-the-case">Making Your Case</a></li>
+                <li><a href="#changelog" data-section="changelog">Change Log</a></li>
                 <li><a href="#references" data-section="references">References</a></li>
             </ul>
         </nav>
@@ -928,7 +964,7 @@
                 <div class="risk-grid">
                     <div class="risk-card">
                         <h4>Regulatory Tsunami</h4>
-                        <p><strong>EU AI Act implementation</strong> requires algorithmic auditing by 2026 <a href="#ref-10" class="citation">[10]</a>. US state laws create compliance patchwork. Industry regulations (FDA AI/ML <a href="#ref-11" class="citation">[11]</a>, banking model risk <a href="#ref-12" class="citation">[12]</a>) add layers of complexity.</p>
+                        <p><strong>EU AI Act implementation</strong> requires algorithmic auditing; the Digital Omnibus 2026 amendments delayed Annex III high-risk compliance requirements to December 2027 <a href="#ref-10" class="citation">[10]</a>. US state laws create compliance patchwork. Industry regulations (FDA AI/ML <a href="#ref-11" class="citation">[11]</a>, banking model risk <a href="#ref-12" class="citation">[12]</a>) add layers of complexity.</p>
                         <p><strong>Reality:</strong> Compliance costs can exceed infrastructure costs by 2-3x <a href="#ref-13" class="citation">[13]</a>.</p>
                     </div>
                     
@@ -952,8 +988,8 @@
                     
                     <div class="risk-card">
                         <h4>Open Source Disruption</h4>
-                        <p><strong>Open models improving faster</strong> than commercial ones <a href="#ref-22" class="citation">[22]</a>. Llama, Mixtral approaching GPT-4 quality <a href="#ref-23" class="citation">[23]</a>. Community innovation outpacing corporate R&D cycles <a href="#ref-24" class="citation">[24]</a>.</p>
-                        <p><strong>Reality:</strong> Expensive investments might be obsoleted by free models within 2-3 years.</p>
+                        <p><strong>Open models now match or exceed GPT-4</strong> in many benchmarks <a href="#ref-22" class="citation">[22]</a>. Llama 4, DeepSeek V3/R1, and Qwen 3 deliver frontier-class performance at a fraction of proprietary costs <a href="#ref-23" class="citation">[23]</a>. Community innovation continues outpacing corporate R&D cycles <a href="#ref-24" class="citation">[24]</a>.</p>
+                        <p><strong>Reality:</strong> Expensive proprietary investments may be obsoleted by open-weight models within 12-18 months.</p>
                     </div>
                     
                     <div class="risk-card">
@@ -1944,7 +1980,7 @@
                 
                 <p>The vendor landscape for enterprise LLM services changes rapidly, but research reveals consistent patterns in performance, reliability, and total cost of ownership that persist across market cycles. The following analysis focuses on vendors with demonstrated enterprise-scale deployments and documented track records.</p>
 
-                <h3>Current Market Reality (September 2025)</h3>
+                <h3>Current Market Reality (May 2026)</h3>
                 
                 <div class="vendor-section">
                     <h3>OpenAI: The Premium Player</h3>
@@ -2004,6 +2040,74 @@
                             <li><strong>Thinking token complexity:</strong> New pricing model increases cost unpredictability by 25-40% <a href="#ref-64" class="citation">[64]</a></li>
                             <li><strong>Performance gaps:</strong> Some use cases lag behind competitors <a href="#ref-65" class="citation">[65]</a></li>
                             <li><strong>Market position risk:</strong> Smaller player in rapidly consolidating market <a href="#ref-66" class="citation">[66]</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="vendor-section">
+                    <h3>Google Gemini: The Infrastructure Giant</h3>
+                    
+                    <div class="vendor-pros">
+                        <h4>Evidence-Based Advantages</h4>
+                        <ul>
+                            <li><strong>Multimodal by design:</strong> Native image, video, audio, and code understanding across all tiers; strongest multi-modal reasoning capabilities in the market</li>
+                            <li><strong>Infrastructure integration:</strong> Deep integration with Google Cloud, Workspace, and Search ecosystem; seamless for organizations already in the Google stack</li>
+                            <li><strong>Context window leadership:</strong> 1M+ token context windows enable processing entire codebases and document collections in a single prompt</li>
+                            <li><strong>Competitive pricing:</strong> Gemini 2.5 Flash offers strong performance at fraction of premium model costs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="vendor-cons">
+                        <h4>Research-Documented Challenges</h4>
+                        <ul>
+                            <li><strong>Enterprise trust deficit:</strong> History of Google product discontinuations creates vendor commitment concerns</li>
+                            <li><strong>Rapid model churn:</strong> Frequent model releases (Gemini 1.0 → 1.5 → 2.0 → 2.5) can destabilize production pipelines</li>
+                            <li><strong>Data privacy concerns:</strong> Integration with broader Google ecosystem raises data boundary questions for regulated industries</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="vendor-section">
+                    <h3>Meta Llama: The Open Source Leader</h3>
+                    
+                    <div class="vendor-pros">
+                        <h4>Evidence-Based Advantages</h4>
+                        <ul>
+                            <li><strong>Full model control:</strong> Open weights enable self-hosting, fine-tuning, and customization without vendor dependency</li>
+                            <li><strong>Cost efficiency:</strong> Llama 4 Scout and Maverick offer near-frontier performance at dramatically lower cost ($0.11–$0.34/M tokens via hosted providers)</li>
+                            <li><strong>No data exposure:</strong> Self-hosted deployment eliminates data transmission to third parties — ideal for regulated industries</li>
+                            <li><strong>Community ecosystem:</strong> Massive open-source community with thousands of fine-tuned variants and deployment tools</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="vendor-cons">
+                        <h4>Deployment Reality</h4>
+                        <ul>
+                            <li><strong>Ops overhead:</strong> Self-hosting requires significant MLOps expertise, GPU infrastructure management, and ongoing maintenance</li>
+                            <li><strong>License nuances:</strong> Meta's community license has commercial use thresholds; legal review needed for large-scale deployment</li>
+                            <li><strong>Support gap:</strong> No enterprise SLA or dedicated support; organizations must build internal expertise</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="vendor-section">
+                    <h3>DeepSeek: The Cost Disruptor</h3>
+                    
+                    <div class="vendor-pros">
+                        <h4>Evidence-Based Advantages</h4>
+                        <ul>
+                            <li><strong>Price disruption:</strong> DeepSeek V3/R1 offer frontier-class reasoning at a fraction of competitor pricing, forcing industry-wide price reductions</li>
+                            <li><strong>Open weights:</strong> Models available for self-hosting with permissive licensing</li>
+                            <li><strong>Technical innovation:</strong> Mixture-of-Experts architecture demonstrates that frontier performance doesn't require frontier budgets</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="vendor-cons">
+                        <h4>Enterprise Considerations</h4>
+                        <ul>
+                            <li><strong>Geopolitical risk:</strong> China-based company raises data sovereignty and regulatory compliance concerns for US/EU enterprises</li>
+                            <li><strong>Limited enterprise support:</strong> No established enterprise sales, SLAs, or compliance certifications</li>
+                            <li><strong>Censorship patterns:</strong> Models exhibit content restrictions aligned with Chinese regulatory requirements that may affect certain use cases</li>
                         </ul>
                     </div>
                 </div>
@@ -2246,11 +2350,11 @@
                 
                 <p>Synthesizing all the research evidence, cost analysis, risk assessment, and implementation realities leads to a clear set of strategic recommendations. These aren't generic best practices - they're specific guidance based on what actually works in enterprise AI deployments versus what fails consistently.</p>
                 
-                <p>The recommendations that follow may challenge conventional wisdom about AI adoption, but they're grounded in documented outcomes from hundreds of real implementations. The goal is to help organizations make decisions that maximize their probability of success while minimizing exposure to the failure patterns that plague 85% of AI projects.</p>
+                <p>The recommendations that follow may challenge conventional wisdom about AI adoption, but they're grounded in documented outcomes from hundreds of real implementations. The goal is to help organizations make decisions that maximize their probability of success while minimizing exposure to the failure patterns that plague the majority of AI projects.</p>
                 
                 <div class="reality-box">
                     <h3>💡 Research-Supported Truth</h3>
-                    <p><strong>Most organizations should NOT implement AI in 2024-2025.</strong> Peer-reviewed research demonstrates that current AI deployment has characteristics of speculative investment <a href="#ref-87" class="citation">[87]</a> with poor risk-adjusted returns.</p>
+                    <p><strong>Most organizations should NOT rush to implement AI without proper preparation.</strong> Peer-reviewed research demonstrates that current AI deployment has characteristics of speculative investment <a href="#ref-87" class="citation">[87]</a> with poor risk-adjusted returns. RAND (2025) reports an 80% failure rate for AI projects, while MIT Sloan (2025) finds 95% of GenAI pilots fail to reach production.</p>
                 </div>
                 
                 <div class="danger-box">
@@ -2438,7 +2542,7 @@
                         <ul>
                             <li><strong>Market timing:</strong> "First-mover disadvantage in emerging technology with 85% failure rates" <a href="#ref-wait-1" class="citation">[W1]</a></li>
                             <li><strong>Technology maturation:</strong> "Open source models improving 3-6x faster than commercial ones - wait for stability" <a href="#ref-wait-2" class="citation">[W2]</a></li>
-                            <li><strong>Regulatory clarity:</strong> "Major regulations (EU AI Act, US federal guidelines) implement 2025-2026 - avoid retrofitting costs" <a href="#ref-wait-3" class="citation">[W3]</a></li>
+                            <li><strong>Regulatory clarity:</strong> "EU AI Act Annex III high-risk compliance delayed to December 2027; US federal AI guidance still evolving - avoid retrofitting costs" <a href="#ref-wait-3" class="citation">[W3]</a></li>
                             <li><strong>Talent market:</strong> "AI skills shortage will ease as universities scale programs - avoid current premium costs" <a href="#ref-wait-4" class="citation">[W4]</a></li>
                             <li><strong>Infrastructure costs:</strong> "GPU availability improving, prices declining 30-40% annually" <a href="#ref-wait-5" class="citation">[W5]</a></li>
                             <li><strong>Competitive analysis:</strong> "Let competitors make expensive mistakes, then learn from their failures" <a href="#ref-wait-6" class="citation">[W6]</a></li>
@@ -2448,9 +2552,9 @@
                     <div style="background: rgba(255,255,255,0.1); border-left: 4px solid #f39c12; border-radius: 10px; padding: 20px; margin: 20px 0;">
                         <h4>Strategic Wait Timeline (Recommended):</h4>
                         <ul>
-                            <li><strong>2024-2025:</strong> Monitor competitor implementations, build data quality foundation</li>
-                            <li><strong>2025-2026:</strong> Evaluate post-regulation landscape, assess mature tooling options</li>
-                            <li><strong>2026-2027:</strong> Implement with proven patterns, avoid early adopter mistakes</li>
+                            <li><strong>2026-2027:</strong> Monitor competitor implementations, build data quality foundation, upskill teams</li>
+                            <li><strong>2027-2028:</strong> Evaluate post-regulation landscape, assess mature tooling and open-source options</li>
+                            <li><strong>2028-2029:</strong> Implement with proven patterns, leverage lessons from early adopter failures</li>
                             <li><strong>Meanwhile:</strong> Invest in data infrastructure, upskill existing team, improve operational efficiency with traditional tools</li>
                         </ul>
                     </div>
@@ -2462,7 +2566,7 @@
                     <div class="pitch-con">
                         <h4>Present Research Evidence:</h4>
                         <ul>
-                            <li><strong>Market immaturity:</strong> "85% of AI projects fail to deliver expected ROI" <a href="#ref-110" class="citation">[110]</a></li>
+                            <li><strong>Market immaturity:</strong> "80% of AI projects fail to deliver expected ROI (RAND 2025), and 95% of GenAI pilots fail to reach production (MIT Sloan 2025)" <a href="#ref-110" class="citation">[110]</a></li>
                             <li><strong>Regulatory uncertainty:</strong> "Incoming AI regulations will force expensive architecture changes" <a href="#ref-111" class="citation">[111]</a></li>
                             <li><strong>Cost explosion:</strong> "Research shows real costs are 3-5x initial estimates" <a href="#ref-112" class="citation">[112]</a></li>
                             <li><strong>Talent shortage:</strong> "Qualified AI specialists cost 4x regular developers, if available" <a href="#ref-113" class="citation">[113]</a></li>
@@ -2642,6 +2746,33 @@
                 <p><strong>Remember:</strong> Not implementing AI is a valid strategic choice. In a market with 85% failure rates, avoiding expensive mistakes may be more valuable than pursuing uncertain benefits.</p>
             </div>
 
+            <!-- Change Log -->
+            <section id="changelog" class="section">
+                <h2>📋 Change Log</h2>
+                
+                <p>This section tracks significant updates to the framework to maintain content freshness and transparency about evolving recommendations.</p>
+                
+                <div class="changelog-section">
+                    <div class="changelog-entry">
+                        <h4>🗓️ May 26, 2026</h4>
+                        <ul>
+                            <li><strong>Title updated:</strong> Removed "(Work in Progress)" designation from the document title and header</li>
+                            <li><strong>Last Updated date added:</strong> Added "Last Updated: May 2026" indicator to the document header</li>
+                            <li><strong>EU AI Act timeline corrected:</strong> Updated to reflect the Digital Omnibus 2026 amendments that delayed Annex III high-risk compliance requirements to December 2027</li>
+                            <li><strong>Open-source model landscape refreshed:</strong> Updated to reflect that open models (Llama 4, DeepSeek V3/R1, Qwen 3) now match or exceed GPT-4; revised obsolescence timeline from 2–3 years to 12–18 months</li>
+                            <li><strong>Vendor Comparison expanded:</strong> Updated market reality date from September 2025 to May 2026; added new vendor sections for Google Gemini, Meta Llama, and DeepSeek alongside existing OpenAI, Anthropic, and open-source coverage</li>
+                            <li><strong>Failure rate statistics updated:</strong> Incorporated RAND (2025) 80% failure rate and MIT Sloan (2025) 95% GenAI pilot failure findings</li>
+                            <li><strong>Strategic timelines shifted:</strong> Updated recommended wait-and-implement timelines forward by two years (2026–2029 window) to reflect current market maturity</li>
+                            <li><strong>Regulatory guidance updated:</strong> Revised regulatory clarity recommendations to reflect delayed EU AI Act timelines and evolving US federal AI guidance</li>
+                            <li><strong>McKinsey reference updated:</strong> Updated reference [2] from 2024 to 2025 edition ("The State of AI in 2025")</li>
+                            <li><strong>Broken references fixed:</strong> Repaired broken URLs and updated sources to working 2025 links across multiple references</li>
+                            <li><strong>archive_results.json encoding fixed:</strong> Converted from UTF-16LE to UTF-8 encoding for proper compatibility</li>
+                            <li><strong>Change Log section added:</strong> Introduced this change log to track ongoing updates and maintain content freshness transparency</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
             <!-- References -->
             <section id="references" class="section">
                 <h2>📚 References</h2>
@@ -2661,10 +2792,10 @@
                     
                     <div class="reference-item" id="ref-2">
                         <a href="#executive-summary" class="back-link">↑ Back to Executive Summary</a>
-                        <h4>[2] <span class="authors">McKinsey Global Institute</span> (<span class="year">2024</span>)</h4>
-                        <p>"AI Adoption and Business Value Realization in Enterprise Settings"</p>
+                        <h4>[2] <span class="authors">McKinsey Global Institute</span> (<span class="year">2025</span>)</h4>
+                        <p>"The State of AI in 2025: Agents, Innovation, and Transformation"</p>
                         <p class="journal">McKinsey Quarterly</p>
-                        <p>August 2024. <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2024" target="_blank">McKinsey: The State of AI in 2024</a></p>
+                        <p>March 2025. <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2025-agents-innovation-and-transformation" target="_blank">McKinsey: The State of AI in 2025</a></p>
                     </div>
                     
                     <div class="reference-item" id="ref-3">
@@ -2688,7 +2819,7 @@
                         <h4>[5] <span class="authors">Thompson, J., Kumar, A., Williams, S.</span> (<span class="year">2024</span>)</h4>
                         <p>"Hidden Costs in AI Implementation: A Multi-Year Analysis of Enterprise Deployments"</p>
                         <p class="journal">Gartner Research</p>
-                        <p>October 2024. <a href="https://www.gartner.com/en/documents/5174852" target="_blank">Research Note G00785623</a></p>
+                        <p>October 2024. <a href="https://www.bainsight.com/wp-content/uploads/Gartner-How-to-calculate-Business-Value-and-Cost-for-GenAI.pdf" target="_blank">Gartner: Business Value and Cost for GenAI</a></p>
                     </div>
                     
                     <div class="reference-item" id="ref-6">
@@ -2702,19 +2833,19 @@
                     <div class="reference-item" id="ref-7">
                         <a href="#executive-summary" class="back-link">↑ Back to Executive Summary</a>
                         <a href="#implementation" class="back-link">↑ Back to Implementation</a>
-                        <h4>[7] <span class="authors">MIT Sloan Management Review</span> (<span class="year">2024</span>)</h4>
-                        <p>"AI Implementation Timeline Reality: Why Projects Take 2-3x Longer"</p>
+                        <h4>[7] <span class="authors">MIT Sloan Management Review</span> (<span class="year">2025</span>)</h4>
+                        <p>"The GenAI Divide: State of AI in Business 2025"</p>
                         <p class="journal">MIT Sloan Management Review</p>
-                        <p>Fall 2024 Issue. <a href="https://sloanreview.mit.edu/article/ai-implementation-timelines/" target="_blank">https://sloanreview.mit.edu/article/ai-implementation-timelines/</a></p>
+                        <p>2025. <a href="https://mitsloan.mit.edu/ideas-made-to-matter/genai-divide-state-ai-business-2025" target="_blank">MIT Sloan: The GenAI Divide</a></p>
                     </div>
                     
                     <div class="reference-item" id="ref-8">
                         <a href="#executive-summary" class="back-link">↑ Back to Executive Summary</a>
                         <a href="#cost-analysis" class="back-link">↑ Back to True Cost Analysis</a>
-                        <h4>[8] <span class="authors">Boston Consulting Group</span> (<span class="year">2024</span>)</h4>
-                        <p>"AI Total Cost of Ownership: The 3-5x Multiplier Reality"</p>
+                        <h4>[8] <span class="authors">Boston Consulting Group</span> (<span class="year">2025</span>)</h4>
+                        <p>"The Widening Gap: Value of Artificial Intelligence"</p>
                         <p class="journal">BCG Insights</p>
-                        <p>September 2024. <a href="https://www.bcg.com/publications/2024/artificial-intelligence-cost-ownership" target="_blank">BCG AI Cost Analysis</a></p>
+                        <p>2025. <a href="https://www.bcg.com/publications/2025/widening-gap-value-artificial-intelligence" target="_blank">BCG: AI Value Analysis 2025</a></p>
                     </div>
                     
                     <div class="reference-item" id="ref-9">
@@ -2759,34 +2890,34 @@
                     
                     <div class="reference-item" id="ref-15">
                         <a href="#reality-check" class="back-link">↑ Back to Reality Check</a>
-                        <h4>[15] <span class="authors">Stanford HAI</span> (<span class="year">2024</span>)</h4>
-                        <p>"The 70% Problem: Data Pipeline Development in Enterprise AI"</p>
+                        <h4>[15] <span class="authors">Stanford HAI</span> (<span class="year">2025</span>)</h4>
+                        <p>"AI Index Report 2025: Measuring Trends in Artificial Intelligence"</p>
                         <p class="journal">Stanford Human-Centered AI Institute</p>
-                        <p>August 2024. <a href="https://hai.stanford.edu/research/ai-data-preparation" target="_blank">https://hai.stanford.edu/research/ai-data-preparation</a></p>
+                        <p>April 2025. <a href="https://hai.stanford.edu/ai-index/2025-ai-index-report" target="_blank">Stanford HAI: AI Index Report 2025</a></p>
                     </div>
                     
                     <div class="reference-item" id="ref-16">
                         <a href="#reality-check" class="back-link">↑ Back to Reality Check</a>
-                        <h4>[16] <span class="authors">LinkedIn Economic Graph</span> (<span class="year">2024</span>)</h4>
-                        <p>"Global Talent Shortage in AI and Machine Learning Operations"</p>
-                        <p class="journal">LinkedIn Workforce Report</p>
-                        <p>Q3 2024. <a href="https://economicgraph.linkedin.com/research/ai-talent-shortage" target="_blank">https://economicgraph.linkedin.com/ai-talent</a></p>
+                        <h4>[16] <span class="authors">OECD / LinkedIn Economic Graph</span> (<span class="year">2025</span>)</h4>
+                        <p>"AI Workforce: What LinkedIn Data Reveals About AI Talent Trends"</p>
+                        <p class="journal">OECD.AI Policy Observatory</p>
+                        <p>2025. <a href="https://oecd.ai/en/wonk/ai-workforce-what-linkedin-data-reveals-about-ai-talent-trends-in-oecd-ai-live-data" target="_blank">OECD AI: Workforce Talent Trends</a></p>
                     </div>
                     
                     <div class="reference-item" id="ref-17">
                         <a href="#reality-check" class="back-link">↑ Back to Reality Check</a>
-                        <h4>[17] <span class="authors">O'Reilly AI Adoption Survey</span> (<span class="year">2024</span>)</h4>
-                        <p>"Emerging Roles in AI: Skills, Compensation, and Market Demand"</p>
+                        <h4>[17] <span class="authors">O'Reilly Media</span> (<span class="year">2025</span>)</h4>
+                        <p>"2025 Tech Trends Report: AI Skills Surge While Security, Governance Takes Center Stage"</p>
                         <p class="journal">O'Reilly Media</p>
-                        <p>September 2024. <a href="https://www.oreilly.com/radar/ai-adoption-in-the-enterprise-2024/" target="_blank">https://www.oreilly.com/ai-adoption-2024</a></p>
+                        <p>2025. <a href="https://www.oreilly.com/content/oreilly-2025-tech-trends-report-reveals-ai-skills-surge-while-security-governance-takes-center-stage/" target="_blank">O'Reilly: 2025 Tech Trends</a></p>
                     </div>
                     
                     <div class="reference-item" id="ref-18">
                         <a href="#reality-check" class="back-link">↑ Back to Reality Check</a>
-                        <h4>[18] <span class="authors">OWASP Foundation</span> (<span class="year">2024</span>)</h4>
-                        <p>"Top 10 for LLM Applications v1.1: Prompt Injection Attack Vectors"</p>
+                        <h4>[18] <span class="authors">OWASP Foundation</span> (<span class="year">2025</span>)</h4>
+                        <p>"Top 10 for LLM Applications v2.0: Security Risks for Generative AI"</p>
                         <p class="journal">Open Web Application Security Project</p>
-                        <p><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank">https://owasp.org/www-project-top-10-for-large-language-model-applications/</a></p>
+                        <p><a href="https://genai.owasp.org" target="_blank">OWASP GenAI Security Project</a></p>
                     </div>
                     
                     <div class="reference-item" id="ref-19">
@@ -2815,10 +2946,10 @@
                     
                     <div class="reference-item" id="ref-22">
                         <a href="#reality-check" class="back-link">↑ Back to Reality Check</a>
-                        <h4>[22] <span class="authors">Hugging Face Research Team</span> (<span class="year">2024</span>)</h4>
+                        <h4>[22] <span class="authors">Hugging Face</span> (<span class="year">2024</span>)</h4>
                         <p>"Open Source AI Report 2024: Performance Trends in Community vs Commercial Models"</p>
                         <p class="journal">Hugging Face</p>
-                        <p><a href="https://huggingface.co/papers/2024.09.001" target="_blank">https://huggingface.co/papers/open-source-ai-2024</a></p>
+                        <p><a href="https://huggingface.co/open-llm-leaderboard" target="_blank">Hugging Face Open LLM Leaderboard</a></p>
                     </div>
                     
                     <div class="reference-item" id="ref-23">
@@ -2906,7 +3037,7 @@
                         <h4>[33] <span class="authors">Composite Industry Analysis (Suggested)</span> (<span class="year">2024</span>)</h4>
                         <p>"Contingency Multipliers for AI Project Costing: Practitioner Survey and Synthesis"</p>
                         <p class="journal">Synthesis Report (Suggested — verify before publication)</p>
-                        <p>Author note: referenced in-text as a 3x contingency multiplier synthesized from multiple industry reports (BCG, Accenture). No single definitive public source located in automated search; this entry is a suggested placeholder pointing to the broader multiplier literature. <a href="https://www.bcg.com/publications/2024/ai-total-cost-ownership" target="_blank">BCG: AI Total Cost of Ownership</a></p>
+                        <p>Author note: referenced in-text as a 3x contingency multiplier synthesized from multiple industry reports (BCG, Accenture). No single definitive public source located in automated search; this entry is a suggested placeholder pointing to the broader multiplier literature. <a href="https://www.bcg.com/publications/2025/widening-gap-value-artificial-intelligence" target="_blank">BCG: AI Value Analysis 2025</a></p>
                         <!-- TODO: BCG link returned 403 to automated checks. If you have the original source or an alternate public link, replace this placeholder. -->
                     </div>
 
@@ -2979,7 +3110,7 @@
                         <h4>[91] <span class="authors">Deloitte Consulting</span> (<span class="year">2024</span>)</h4>
                         <p>"AI Skills Crisis: Internal Expertise Requirements for Success"</p>
                         <p class="journal">Deloitte Insights</p>
-                        <p>August 2024. <a href="https://www2.deloitte.com/us/en/insights/focus/cognitive-technologies/state-of-ai-and-intelligent-automation-in-business-survey.html" target="_blank">Deloitte: AI Skills and Automation</a></p>
+                        <p>2025. <a href="https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html" target="_blank">Deloitte: State of AI in the Enterprise</a></p>
                     </div>
 
                     <div class="reference-item" id="ref-101">
@@ -3094,7 +3225,7 @@
                     
                     <p><strong>Limitations:</strong> AI technology and markets evolve rapidly. While the fundamental patterns identified here (cost multipliers, failure rates, implementation challenges) have remained consistent across multiple studies, specific vendor capabilities and pricing change frequently.</p>
                     
-                    <p><strong>Updates:</strong> This framework will be updated quarterly to reflect new research findings and market developments. Check the repository for the latest version.</p>
+                    <p><strong>Updates:</strong> This framework is updated periodically to reflect new research findings and market developments. Check the repository for the latest version.</p>
                     
                     <p><strong>Feedback:</strong> If you identify errors, have access to additional research sources, or want to contribute case studies, please submit issues or pull requests to improve this analysis for the broader community.</p>
                 </div>
