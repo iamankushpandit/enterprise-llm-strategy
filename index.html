@@ -68,7 +68,6 @@
         .nav-bar {
             position: sticky;
             top: 0;
-            left: 0;
             background: rgba(52, 73, 94, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 0;
@@ -3575,7 +3574,7 @@
             const scrollPosition = contentContainer.scrollTop + 100;
             
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - contentContainer.offsetTop;
+                const sectionTop = section.offsetTop;
                 const sectionHeight = section.offsetHeight;
                 
                 if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
