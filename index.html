@@ -929,7 +929,7 @@
                 <div class="risk-grid">
                     <div class="risk-card">
                         <h4>Regulatory Tsunami</h4>
-                        <p><strong>EU AI Act implementation</strong> requires algorithmic auditing by 2026 <a href="#ref-10" class="citation">[10]</a>. US state laws create compliance patchwork. Industry regulations (FDA AI/ML <a href="#ref-11" class="citation">[11]</a>, banking model risk <a href="#ref-12" class="citation">[12]</a>) add layers of complexity.</p>
+                        <p><strong>EU AI Act implementation</strong> requires algorithmic auditing; the Digital Omnibus 2026 amendments delayed Annex III high-risk compliance requirements to December 2027 <a href="#ref-10" class="citation">[10]</a>. US state laws create compliance patchwork. Industry regulations (FDA AI/ML <a href="#ref-11" class="citation">[11]</a>, banking model risk <a href="#ref-12" class="citation">[12]</a>) add layers of complexity.</p>
                         <p><strong>Reality:</strong> Compliance costs can exceed infrastructure costs by 2-3x <a href="#ref-13" class="citation">[13]</a>.</p>
                     </div>
                     
@@ -953,8 +953,8 @@
                     
                     <div class="risk-card">
                         <h4>Open Source Disruption</h4>
-                        <p><strong>Open models improving faster</strong> than commercial ones <a href="#ref-22" class="citation">[22]</a>. Llama, Mixtral approaching GPT-4 quality <a href="#ref-23" class="citation">[23]</a>. Community innovation outpacing corporate R&D cycles <a href="#ref-24" class="citation">[24]</a>.</p>
-                        <p><strong>Reality:</strong> Expensive investments might be obsoleted by free models within 2-3 years.</p>
+                        <p><strong>Open models now match or exceed GPT-4</strong> in many benchmarks <a href="#ref-22" class="citation">[22]</a>. Llama 4, DeepSeek V3/R1, and Qwen 3 deliver frontier-class performance at a fraction of proprietary costs <a href="#ref-23" class="citation">[23]</a>. Community innovation continues outpacing corporate R&D cycles <a href="#ref-24" class="citation">[24]</a>.</p>
+                        <p><strong>Reality:</strong> Expensive proprietary investments may be obsoleted by open-weight models within 12-18 months.</p>
                     </div>
                     
                     <div class="risk-card">
@@ -1945,7 +1945,7 @@
                 
                 <p>The vendor landscape for enterprise LLM services changes rapidly, but research reveals consistent patterns in performance, reliability, and total cost of ownership that persist across market cycles. The following analysis focuses on vendors with demonstrated enterprise-scale deployments and documented track records.</p>
 
-                <h3>Current Market Reality (September 2025)</h3>
+                <h3>Current Market Reality (May 2026)</h3>
                 
                 <div class="vendor-section">
                     <h3>OpenAI: The Premium Player</h3>
@@ -2005,6 +2005,74 @@
                             <li><strong>Thinking token complexity:</strong> New pricing model increases cost unpredictability by 25-40% <a href="#ref-64" class="citation">[64]</a></li>
                             <li><strong>Performance gaps:</strong> Some use cases lag behind competitors <a href="#ref-65" class="citation">[65]</a></li>
                             <li><strong>Market position risk:</strong> Smaller player in rapidly consolidating market <a href="#ref-66" class="citation">[66]</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="vendor-section">
+                    <h3>Google Gemini: The Infrastructure Giant</h3>
+                    
+                    <div class="vendor-pros">
+                        <h4>Evidence-Based Advantages</h4>
+                        <ul>
+                            <li><strong>Multimodal by design:</strong> Native image, video, audio, and code understanding across all tiers; strongest multi-modal reasoning capabilities in the market</li>
+                            <li><strong>Infrastructure integration:</strong> Deep integration with Google Cloud, Workspace, and Search ecosystem; seamless for organizations already in the Google stack</li>
+                            <li><strong>Context window leadership:</strong> 1M+ token context windows enable processing entire codebases and document collections in a single prompt</li>
+                            <li><strong>Competitive pricing:</strong> Gemini 2.5 Flash offers strong performance at fraction of premium model costs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="vendor-cons">
+                        <h4>Research-Documented Challenges</h4>
+                        <ul>
+                            <li><strong>Enterprise trust deficit:</strong> History of Google product discontinuations creates vendor commitment concerns</li>
+                            <li><strong>Rapid model churn:</strong> Frequent model releases (Gemini 1.0 → 1.5 → 2.0 → 2.5) can destabilize production pipelines</li>
+                            <li><strong>Data privacy concerns:</strong> Integration with broader Google ecosystem raises data boundary questions for regulated industries</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="vendor-section">
+                    <h3>Meta Llama: The Open Source Leader</h3>
+                    
+                    <div class="vendor-pros">
+                        <h4>Evidence-Based Advantages</h4>
+                        <ul>
+                            <li><strong>Full model control:</strong> Open weights enable self-hosting, fine-tuning, and customization without vendor dependency</li>
+                            <li><strong>Cost efficiency:</strong> Llama 4 Scout and Maverick offer near-frontier performance at dramatically lower cost ($0.11–$0.34/M tokens via hosted providers)</li>
+                            <li><strong>No data exposure:</strong> Self-hosted deployment eliminates data transmission to third parties — ideal for regulated industries</li>
+                            <li><strong>Community ecosystem:</strong> Massive open-source community with thousands of fine-tuned variants and deployment tools</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="vendor-cons">
+                        <h4>Deployment Reality</h4>
+                        <ul>
+                            <li><strong>Ops overhead:</strong> Self-hosting requires significant MLOps expertise, GPU infrastructure management, and ongoing maintenance</li>
+                            <li><strong>License nuances:</strong> Meta's community license has commercial use thresholds; legal review needed for large-scale deployment</li>
+                            <li><strong>Support gap:</strong> No enterprise SLA or dedicated support; organizations must build internal expertise</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="vendor-section">
+                    <h3>DeepSeek: The Cost Disruptor</h3>
+                    
+                    <div class="vendor-pros">
+                        <h4>Evidence-Based Advantages</h4>
+                        <ul>
+                            <li><strong>Price disruption:</strong> DeepSeek V3/R1 offer frontier-class reasoning at a fraction of competitor pricing, forcing industry-wide price reductions</li>
+                            <li><strong>Open weights:</strong> Models available for self-hosting with permissive licensing</li>
+                            <li><strong>Technical innovation:</strong> Mixture-of-Experts architecture demonstrates that frontier performance doesn't require frontier budgets</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="vendor-cons">
+                        <h4>Enterprise Considerations</h4>
+                        <ul>
+                            <li><strong>Geopolitical risk:</strong> China-based company raises data sovereignty and regulatory compliance concerns for US/EU enterprises</li>
+                            <li><strong>Limited enterprise support:</strong> No established enterprise sales, SLAs, or compliance certifications</li>
+                            <li><strong>Censorship patterns:</strong> Models exhibit content restrictions aligned with Chinese regulatory requirements that may affect certain use cases</li>
                         </ul>
                     </div>
                 </div>
@@ -2247,11 +2315,11 @@
                 
                 <p>Synthesizing all the research evidence, cost analysis, risk assessment, and implementation realities leads to a clear set of strategic recommendations. These aren't generic best practices - they're specific guidance based on what actually works in enterprise AI deployments versus what fails consistently.</p>
                 
-                <p>The recommendations that follow may challenge conventional wisdom about AI adoption, but they're grounded in documented outcomes from hundreds of real implementations. The goal is to help organizations make decisions that maximize their probability of success while minimizing exposure to the failure patterns that plague 85% of AI projects.</p>
+                <p>The recommendations that follow may challenge conventional wisdom about AI adoption, but they're grounded in documented outcomes from hundreds of real implementations. The goal is to help organizations make decisions that maximize their probability of success while minimizing exposure to the failure patterns that plague the majority of AI projects.</p>
                 
                 <div class="reality-box">
                     <h3>💡 Research-Supported Truth</h3>
-                    <p><strong>Most organizations should NOT implement AI in 2024-2025.</strong> Peer-reviewed research demonstrates that current AI deployment has characteristics of speculative investment <a href="#ref-87" class="citation">[87]</a> with poor risk-adjusted returns.</p>
+                    <p><strong>Most organizations should NOT rush to implement AI without proper preparation.</strong> Peer-reviewed research demonstrates that current AI deployment has characteristics of speculative investment <a href="#ref-87" class="citation">[87]</a> with poor risk-adjusted returns. RAND (2025) reports an 80% failure rate for AI projects, while MIT Sloan (2025) finds 95% of GenAI pilots fail to reach production.</p>
                 </div>
                 
                 <div class="danger-box">
@@ -2439,7 +2507,7 @@
                         <ul>
                             <li><strong>Market timing:</strong> "First-mover disadvantage in emerging technology with 85% failure rates" <a href="#ref-wait-1" class="citation">[W1]</a></li>
                             <li><strong>Technology maturation:</strong> "Open source models improving 3-6x faster than commercial ones - wait for stability" <a href="#ref-wait-2" class="citation">[W2]</a></li>
-                            <li><strong>Regulatory clarity:</strong> "Major regulations (EU AI Act, US federal guidelines) implement 2025-2026 - avoid retrofitting costs" <a href="#ref-wait-3" class="citation">[W3]</a></li>
+                            <li><strong>Regulatory clarity:</strong> "EU AI Act Annex III high-risk compliance delayed to December 2027; US federal AI guidance still evolving - avoid retrofitting costs" <a href="#ref-wait-3" class="citation">[W3]</a></li>
                             <li><strong>Talent market:</strong> "AI skills shortage will ease as universities scale programs - avoid current premium costs" <a href="#ref-wait-4" class="citation">[W4]</a></li>
                             <li><strong>Infrastructure costs:</strong> "GPU availability improving, prices declining 30-40% annually" <a href="#ref-wait-5" class="citation">[W5]</a></li>
                             <li><strong>Competitive analysis:</strong> "Let competitors make expensive mistakes, then learn from their failures" <a href="#ref-wait-6" class="citation">[W6]</a></li>
@@ -2449,9 +2517,9 @@
                     <div style="background: rgba(255,255,255,0.1); border-left: 4px solid #f39c12; border-radius: 10px; padding: 20px; margin: 20px 0;">
                         <h4>Strategic Wait Timeline (Recommended):</h4>
                         <ul>
-                            <li><strong>2024-2025:</strong> Monitor competitor implementations, build data quality foundation</li>
-                            <li><strong>2025-2026:</strong> Evaluate post-regulation landscape, assess mature tooling options</li>
-                            <li><strong>2026-2027:</strong> Implement with proven patterns, avoid early adopter mistakes</li>
+                            <li><strong>2026-2027:</strong> Monitor competitor implementations, build data quality foundation, upskill teams</li>
+                            <li><strong>2027-2028:</strong> Evaluate post-regulation landscape, assess mature tooling and open-source options</li>
+                            <li><strong>2028-2029:</strong> Implement with proven patterns, leverage lessons from early adopter failures</li>
                             <li><strong>Meanwhile:</strong> Invest in data infrastructure, upskill existing team, improve operational efficiency with traditional tools</li>
                         </ul>
                     </div>
@@ -2463,7 +2531,7 @@
                     <div class="pitch-con">
                         <h4>Present Research Evidence:</h4>
                         <ul>
-                            <li><strong>Market immaturity:</strong> "85% of AI projects fail to deliver expected ROI" <a href="#ref-110" class="citation">[110]</a></li>
+                            <li><strong>Market immaturity:</strong> "80% of AI projects fail to deliver expected ROI (RAND 2025), and 95% of GenAI pilots fail to reach production (MIT Sloan 2025)" <a href="#ref-110" class="citation">[110]</a></li>
                             <li><strong>Regulatory uncertainty:</strong> "Incoming AI regulations will force expensive architecture changes" <a href="#ref-111" class="citation">[111]</a></li>
                             <li><strong>Cost explosion:</strong> "Research shows real costs are 3-5x initial estimates" <a href="#ref-112" class="citation">[112]</a></li>
                             <li><strong>Talent shortage:</strong> "Qualified AI specialists cost 4x regular developers, if available" <a href="#ref-113" class="citation">[113]</a></li>
@@ -3095,7 +3163,7 @@
                     
                     <p><strong>Limitations:</strong> AI technology and markets evolve rapidly. While the fundamental patterns identified here (cost multipliers, failure rates, implementation challenges) have remained consistent across multiple studies, specific vendor capabilities and pricing change frequently.</p>
                     
-                    <p><strong>Updates:</strong> This framework will be updated quarterly to reflect new research findings and market developments. Check the repository for the latest version.</p>
+                    <p><strong>Updates:</strong> This framework is updated periodically to reflect new research findings and market developments. Check the repository for the latest version.</p>
                     
                     <p><strong>Feedback:</strong> If you identify errors, have access to additional research sources, or want to contribute case studies, please submit issues or pull requests to improve this analysis for the broader community.</p>
                 </div>
