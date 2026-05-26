@@ -511,6 +511,40 @@
             border-left: 4px solid #e74c3c;
         }
         
+        .changelog-section {
+            background: #f0f7ee;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            border-top: 4px solid #27ae60;
+        }
+        
+        .changelog-entry {
+            padding: 15px 20px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 8px;
+            border-left: 3px solid #27ae60;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        
+        .changelog-entry h4 {
+            margin: 0 0 8px 0;
+            color: #27ae60;
+            font-size: 1em;
+            font-weight: 600;
+        }
+        
+        .changelog-entry ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        
+        .changelog-entry li {
+            margin: 4px 0;
+        }
+        
         .references-section {
             background: #f8f9fa;
             border-radius: 15px;
@@ -842,6 +876,7 @@
                 <li><a href="#implementation" data-section="implementation">Implementation</a></li>
                 <li><a href="#recommendations" data-section="recommendations">Recommendations</a></li>
                 <li><a href="#making-the-case" data-section="making-the-case">Making Your Case</a></li>
+                <li><a href="#changelog" data-section="changelog">Change Log</a></li>
                 <li><a href="#references" data-section="references">References</a></li>
             </ul>
         </nav>
@@ -2710,6 +2745,33 @@
                 
                 <p><strong>Remember:</strong> Not implementing AI is a valid strategic choice. In a market with 85% failure rates, avoiding expensive mistakes may be more valuable than pursuing uncertain benefits.</p>
             </div>
+
+            <!-- Change Log -->
+            <section id="changelog" class="section">
+                <h2>📋 Change Log</h2>
+                
+                <p>This section tracks significant updates to the framework to maintain content freshness and transparency about evolving recommendations.</p>
+                
+                <div class="changelog-section">
+                    <div class="changelog-entry">
+                        <h4>🗓️ May 26, 2026</h4>
+                        <ul>
+                            <li><strong>Title updated:</strong> Removed "(Work in Progress)" designation from the document title and header</li>
+                            <li><strong>Last Updated date added:</strong> Added "Last Updated: May 2026" indicator to the document header</li>
+                            <li><strong>EU AI Act timeline corrected:</strong> Updated to reflect the Digital Omnibus 2026 amendments that delayed Annex III high-risk compliance requirements to December 2027</li>
+                            <li><strong>Open-source model landscape refreshed:</strong> Updated to reflect that open models (Llama 4, DeepSeek V3/R1, Qwen 3) now match or exceed GPT-4; revised obsolescence timeline from 2–3 years to 12–18 months</li>
+                            <li><strong>Vendor Comparison expanded:</strong> Updated market reality date from September 2025 to May 2026; added new vendor sections for Google Gemini, Meta Llama, and DeepSeek alongside existing OpenAI, Anthropic, and open-source coverage</li>
+                            <li><strong>Failure rate statistics updated:</strong> Incorporated RAND (2025) 80% failure rate and MIT Sloan (2025) 95% GenAI pilot failure findings</li>
+                            <li><strong>Strategic timelines shifted:</strong> Updated recommended wait-and-implement timelines forward by two years (2026–2029 window) to reflect current market maturity</li>
+                            <li><strong>Regulatory guidance updated:</strong> Revised regulatory clarity recommendations to reflect delayed EU AI Act timelines and evolving US federal AI guidance</li>
+                            <li><strong>McKinsey reference updated:</strong> Updated reference [2] from 2024 to 2025 edition ("The State of AI in 2025")</li>
+                            <li><strong>Broken references fixed:</strong> Repaired broken URLs and updated sources to working 2025 links across multiple references</li>
+                            <li><strong>archive_results.json encoding fixed:</strong> Converted from UTF-16LE to UTF-8 encoding for proper compatibility</li>
+                            <li><strong>Change Log section added:</strong> Introduced this change log to track ongoing updates and maintain content freshness transparency</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
             <!-- References -->
             <section id="references" class="section">
